@@ -6,6 +6,7 @@ account
 actions
 add
 anthropic
+antislop
 assetsignore
 based
 billing
@@ -210,6 +211,8 @@ site
 skens
 skill
 skills
+skilu
+slop
 sonnet
 spend
 spending
