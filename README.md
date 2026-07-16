@@ -7,7 +7,7 @@ Pirmais skils ir `lv-antislop`, latviešu valodas stila un vārdu formu pārbaud
 ## Uzstādīšana
 
 ```text
-/plugin marketplace add OWNER-GITHUB/johnicorn-skills
+/plugin marketplace add Johnicorn/johnicorn-skills
 /plugin install lv-antislop@johnicorn-skills
 ```
 

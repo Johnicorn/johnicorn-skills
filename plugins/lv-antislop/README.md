@@ -7,7 +7,7 @@ A Latvian de-slop skill plus a deterministic B1/B2/B3 gate.
 Install it from the marketplace:
 
 ```text
-/plugin marketplace add OWNER-GITHUB/johnicorn-skills
+/plugin marketplace add Johnicorn/johnicorn-skills
 /plugin install lv-antislop@johnicorn-skills
 ```
 
