@@ -43,6 +43,10 @@ Būvētājs izmanto CLARIN avotus ar CC BY-SA 4.0 licenci un glabā lejupielāde
 
 Ja instalē caur marketplace: būvē indeksus ĀRPUS spraudņa mapes, piemēram `python tools/build_from_clarin.py --data-dir ~/lv-antislop-data`, un padod `pilot.py` to pašu ceļu ar `--index`. Spraudņa atjauninājums nomaina tā mapi — ārējais datu ceļš pārdzīvo atjauninājumus, iekšējais ne.
 
+## Datu kopa: saskaņas minimālie pāri
+
+Saskaņas pārbaudes kvalitātes mērījums balstās uz autora veidotu un dzimtās valodas runātāja validētu datu kopu — 110 minimālajiem pāriem ar iesaldētu integritātes hash: [contracts/2b-minimal-pairs.v1.yaml](contracts/2b-minimal-pairs.v1.yaml), licence CC BY 4.0. Mērījuma protokols, skripti un pilnie rezultāti: [spike/](spike/). Cik zināms, tas ir pirmais publiskais latviešu locījumu saskaņas minimālo pāru komplekts.
+
 ## Testu palaišana
 
 ```text

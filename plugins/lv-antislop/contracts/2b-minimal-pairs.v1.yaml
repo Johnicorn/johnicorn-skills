@@ -1,0 +1,1098 @@
+# 2b minimal-pairs collection — the NATIVE gating input for the §12 parser spike.
+# Fill-in template for Jānis. The spike CANNOT run before this file is complete
+# (≥ 50 native-validated pairs PER family) — see docs/2026-07-15-lv-antislop-v2-design.md §12.
+#
+# WHAT IS A MINIMAL PAIR HERE
+#   One sentence in two variants that differ in EXACTLY ONE morphological feature
+#   on the dependent word: the grammatical variant + the ungrammatical variant.
+#   The violation site must be unambiguous (one token), the rest of the sentence
+#   identical and error-free, natural word order, no rare vocabulary.
+#
+# PER-PAIR CHECKLIST (all must hold before status: validated)
+#   1. Exactly one feature differs (Case | Number | Gender | Person).
+#   2. The bad variant is truly UNGRAMMATICAL for a native (not merely stilted).
+#   3. No other typo/agreement issue anywhere in either variant.
+#   4. flag_token = the surface token a correct checker should flag in `bad`.
+#   5. syncretism trap checked: the bad form must not have an alternative valid
+#      reading in this exact sentence (if it does -> tag phenomenon: syncretism
+#      and describe the second reading in notes, or rewrite the sentence).
+#
+# FAMILY DEFINITIONS (from design §5 "Agreement (2b, gated)")
+#   amod : head = NOUN, dependent = ADJ (or participle -> VerbForm-aware);
+#          features: Case / Number / Gender where present.
+#   nsubj: subject–verb; features: Person / Number ONLY where the finite verb
+#          form overtly marks them (LV 3rd person does NOT mark sg/pl on most
+#          verbs -> those are abstain cases, NOT violations; see EX-N3).
+#
+# PHENOMENON QUOTA (so coverage/abstention ≥ thresholds mean something):
+#   aim ≈ 30 plain + ≥ 4 each of: coordination, indeclinable, numeral,
+#   syncretism, ellipsis, participle(amod)/reflexive(nsubj) per family.
+#
+# STATUS VALUES:  todo -> drafted -> validated   (only `validated` counts toward 50)
+# `example: true` entries are worked demonstrations — they do NOT count.
+#
+# DRAFT PROVENANCE (2026-07-16): A-01..A-50 / N-01..N-50 melnrakstus sagatavoja
+# Claude pēc Jāņa lūguma (status: drafted). Uz 50 skaitās TIKAI pēc Jāņa pārskata
+# (native-validated, §12) — katrs teikums jāpārlasa un jālabo; arī gramatiski
+# pareizs, bet neidiomātisks kalks ir jālabo (sk. EX-N4 labojumu). Refleksīvie
+# nsubj pāri ir plain kvotā ar piezīmi (enum vērtības reflexive nav).
+#
+# Protocol freeze: when both families reach >= 50 validated, this file is
+# frozen + SHA-256-hashed BEFORE the spike runs (§12). Do not edit after freeze.
+
+meta:
+  version: 1
+  design_ref: docs/2026-07-15-lv-antislop-v2-design.md#12
+  target_per_family: 50
+  counts_only: validated
+  frozen: true
+  frozen_sha256: "97ee930528d9d40da7e94657aa415aa8f71c7598a5ead3947435867e3d0cb6e4"
+
+pairs:
+
+  # ---------------- worked examples — amod ----------------
+  - id: EX-A1
+    example: true
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Pagalmā aug zaļš koks."
+    bad: "Pagalmā aug zaļa koks."
+    flag_token: "zaļa"
+    notes: "koks = masc; zaļa = fem nom sg. Vienas pazīmes pārkāpums, nepārprotams."
+    status: "validated"
+
+  - id: EX-A2
+    example: true
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Es redzu lielu māju."
+    bad: "Es redzu liela māju."
+    flag_token: "liela"
+    notes: "māju = acc sg; liela ≠ acc. Pārbaudīts: 'liela' šeit nav derīgas alternatīvas nolasījuma."
+    status: "validated"
+
+  - id: EX-A3
+    example: true
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Mazie bērni spēlējas dārzā."
+    bad: "Mazais bērni spēlējas dārzā."
+    flag_token: "Mazais"
+    notes: "bērni = nom pl; mazais = nom sg (noteiktā galotne). Skaitļa pārkāpums. (flag_token 2026-07-16 salāgots ar virsmas formu Mazais — mazie burti neļāva editora čipam iezīmēties.)"
+    status: "validated"
+
+  - id: EX-A4
+    example: true
+    family: "amod"
+    feature: "Number"
+    phenomenon: "participle"
+    good: "Paveiktais darbs deva rezultātu."
+    bad: "Paveiktie darbs deva rezultātu."
+    flag_token: "Paveiktie"
+    notes: "Divdabis kā adjektīvs (VerbForm=Part): darbs = sg; paveiktie = TIKAI masc nom pl (noteiktā galotne) — nav sinkrētiska otrā nolasījuma. (Sākotnējais variants 'paveiktā' bija divdomīgs: fem nom sg / masc gen sg — codex-audita ķēriens.) Parseris drīkst abstain, ja divdabi analizē citādi — tad tas krīt coverage, ne precision."
+    status: "validated"
+
+  - id: EX-A5
+    example: true
+    family: "amod"
+    feature: "Case"
+    phenomenon: "indeclinable"
+    good: "Viņa valkāja rozā kleitu."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVAIS kontroles gadījums: 'rozā' ir nelokāms — pareizam čekerim NAV jāflagō nekas. bad=null nozīmē 'šai teikumā violation nav'; mēra false-positive pusi."
+    status: "validated"
+
+  # ---------------- worked examples — nsubj ----------------
+  - id: EX-N1
+    example: true
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es eju uz darbu."
+    bad: "Es ej uz darbu."
+    flag_token: "ej"
+    notes: "1sg 'eju' vs 2sg 'ej' — persona vārda formā atklāti marķēta."
+    status: "validated"
+
+  - id: EX-N2
+    example: true
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Mēs strādājam birojā."
+    bad: "Mēs strādājat birojā."
+    flag_token: "strādājat"
+    notes: "1pl vs 2pl — abas formas plural, mainās TIKAI persona (1.→2.). Sākotnēji kļūdaini marķēts Number — codex-audita ķēriens."
+    status: "validated"
+
+  - id: EX-N5
+    example: true
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Tu strādā birojā."
+    bad: "Tu strādājat birojā."
+    flag_token: "strādājat"
+    notes: "2sg vs 2pl vienas personas ietvaros — tīrs skaitļa pārkāpums. Uzmanību: 'Jūs strādājat' (pieklājības forma) ir gramatiska — tieši tāpēc subjekts šeit ir 'tu', ne 'jūs'."
+    status: "validated"
+
+  - id: EX-N3
+    example: true
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Bērni skrien pa pagalmu."
+    bad: null
+    flag_token: null
+    notes: "ABSTAIN etalons: 3. personā 'skrien' sg=pl — verbs skaitli atklāti NEmarķē, tāpēc te pārkāpumu konstruēt NAV iespējams. Pareiza uzvedība = abstain/no-flag. Šādi gadījumi baro abstention≤0.30 mērījumu."
+    status: "validated"
+
+  - id: EX-N4
+    example: true
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "coordination"
+    good: "Mēs ar Annu ejam uz tirgu."
+    bad: "Mēs ar Annu iet uz tirgu."
+    flag_token: "iet"
+    notes: "Komitatīvais subjekts (mēs ar Annu) — latviskais 'es un Anna' ekvivalents; Jāņa labojums 2026-07-16: sākotnējais 'Es un Anna ejam' bija gramatisks, bet neidiomātisks kalks. Kontrolieris ir mēs -> 1pl ejam; iet (3. pers.) pārkāpj personu. Slazds naivam čekerim: tuvākais vārds Annu ir 3sg. Koordinācijas fenomens."
+    status: "validated"
+
+  # ---------------- fill-in slots (generated; DO NOT renumber) ----------------
+  - id: A-01
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Virtuvē smaržo siltā maize."
+    bad: "Virtuvē smaržo silts maize."
+    flag_token: "silts"
+    notes: "maize = fem nom sg; silts = TIKAI masc nom sg — dzimtes pārkāpums, formai nav alternatīva nolasījuma."
+    status: "validated"
+  - id: A-02
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Plauktā stāv zila krūze."
+    bad: "Plauktā stāv zils krūze."
+    flag_token: "zils"
+    notes: "krūze = fem nom sg; zils = tikai masc nom sg. Viena pazīme (dzimte), forma viennozīmīga."
+    status: "validated"
+  - id: A-03
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Bērni lasa jaunas grāmatas."
+    bad: "Bērni lasa jaunus grāmatas."
+    flag_token: "jaunus"
+    notes: "grāmatas = fem acc pl; jaunus = tikai masc acc pl — mainās tikai dzimte, locījums un skaitlis sakrīt."
+    status: "validated"
+  - id: A-04
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Viņš palīdzēja mazajam bērnam."
+    bad: "Viņš palīdzēja mazajai bērnam."
+    flag_token: "mazajai"
+    notes: "bērnam = masc dat sg; mazajai = tikai fem dat sg (noteiktā galotne) — forma viennozīmīga."
+    status: "validated"
+  - id: A-05
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Kaimiņš palīdz vecām sievietēm."
+    bad: "Kaimiņš palīdz veciem sievietēm."
+    flag_token: "veciem"
+    notes: "sievietēm = fem dat pl; veciem = tikai masc dat pl."
+    status: "validated"
+  - id: A-06
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Uz galda kūp karsta zupa."
+    bad: "Uz galda kūp karsts zupa."
+    flag_token: "karsts"
+    notes: "zupa = fem nom sg; karsts = tikai masc nom sg."
+    status: "validated"
+  - id: A-07
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Treneris uzticas jauniem puišiem."
+    bad: "Treneris uzticas jaunām puišiem."
+    flag_token: "jaunām"
+    notes: "puišiem = masc dat pl; jaunām = tikai fem dat pl."
+    status: "validated"
+  - id: A-08
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "plain"
+    good: "Meitene zīmē zaļas lapas."
+    bad: "Meitene zīmē zaļus lapas."
+    flag_token: "zaļus"
+    notes: "lapas = fem acc pl; zaļus = tikai masc acc pl."
+    status: "validated"
+  - id: A-09
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Mēs apciemojam vecu draugu."
+    bad: "Mēs apciemojam vecs draugu."
+    flag_token: "vecs"
+    notes: "draugu = acc sg; vecs = tikai nom sg — locījuma pārkāpums (EX-A2 shēma ar citu leksiku)."
+    status: "validated"
+  - id: A-10
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Suns pieder mazam zēnam."
+    bad: "Suns pieder mazs zēnam."
+    flag_token: "mazs"
+    notes: "zēnam = dat sg; mazs = tikai nom sg."
+    status: "validated"
+  - id: A-11
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Viņi dzīvo lielā mājā."
+    bad: "Viņi dzīvo lielai mājā."
+    flag_token: "lielai"
+    notes: "mājā = loc sg; lielai = tikai fem dat sg — locījuma pārkāpums, forma viennozīmīga."
+    status: "validated"
+  - id: A-12
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Kaķis guļ uz mīkstas segas."
+    bad: "Kaķis guļ uz mīkstu segas."
+    flag_token: "mīkstu"
+    notes: "uz + gen: segas = gen sg; mīkstu formas (acc sg, gen pl) šajā teikumā nedod nevienu derīgu nolasījumu — pārbaudīts. Paredzētā kļūda: locījums (gen -> acc)."
+    status: "validated"
+  - id: A-13
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Zēns spēlējas ar mazu suni."
+    bad: "Zēns spēlējas ar mazam suni."
+    flag_token: "mazam"
+    notes: "ar + acc: suni = acc sg; mazam = tikai dat sg."
+    status: "validated"
+  - id: A-14
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Viņa atgriezās no tālas pilsētas."
+    bad: "Viņa atgriezās no tālai pilsētas."
+    flag_token: "tālai"
+    notes: "no + gen: pilsētas = gen sg; tālai = tikai dat sg."
+    status: "validated"
+  - id: A-15
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Grāmata guļ uz brūnā galda."
+    bad: "Grāmata guļ uz brūnais galda."
+    flag_token: "brūnais"
+    notes: "galda = gen sg; brūnais = tikai masc nom sg (noteiktā galotne). Substantivēts nolasījums te nav sintaktiski derīgs — pārbaudīts."
+    status: "validated"
+  - id: A-16
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Bērni skrien pa zaļo pļavu."
+    bad: "Bērni skrien pa zaļajā pļavu."
+    flag_token: "zaļajā"
+    notes: "pa + acc: pļavu = acc sg; zaļajā = tikai loc sg (noteiktā galotne)."
+    status: "validated"
+  - id: A-17
+    family: "amod"
+    feature: "Case"
+    phenomenon: "plain"
+    good: "Vecāki lepojas ar gudro meitu."
+    bad: "Vecāki lepojas ar gudrajai meitu."
+    flag_token: "gudrajai"
+    notes: "ar + acc: meitu = acc sg; gudrajai = tikai fem dat sg."
+    status: "validated"
+  - id: A-18
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Vecie koki met ēnu."
+    bad: "Vecais koki met ēnu."
+    flag_token: "Vecais"
+    notes: "koki = nom pl; Vecais = tikai masc nom sg (noteiktā galotne) — skaitļa pārkāpums (EX-A3 shēma)."
+    status: "validated"
+  - id: A-19
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Jaunie spēlētāji trenējas katru dienu."
+    bad: "Jaunais spēlētāji trenējas katru dienu."
+    flag_token: "Jaunais"
+    notes: "spēlētāji = nom pl; Jaunais = tikai nom sg."
+    status: "validated"
+  - id: A-20
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Saimniece dod graudus baltajām vistām."
+    bad: "Saimniece dod graudus baltajai vistām."
+    flag_token: "baltajai"
+    notes: "vistām = dat pl; baltajai = tikai dat sg."
+    status: "validated"
+  - id: A-21
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Viņš nes smagus maisus."
+    bad: "Viņš nes smagu maisus."
+    flag_token: "smagu"
+    notes: "maisus = acc pl; smagu (acc sg vai gen pl) šajā teikumā nedod nevienu derīgu nolasījumu — pārbaudīts. Paredzētā kļūda: skaitlis (acc pl -> acc sg)."
+    status: "validated"
+  - id: A-22
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Tēvs palīdz mazajiem dēliem."
+    bad: "Tēvs palīdz mazajam dēliem."
+    flag_token: "mazajam"
+    notes: "dēliem = dat pl; mazajam = tikai dat sg."
+    status: "validated"
+  - id: A-23
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Melni mākoņi krājas pie apvāršņa."
+    bad: "Melns mākoņi krājas pie apvāršņa."
+    flag_token: "Melns"
+    notes: "mākoņi = nom pl; Melns = tikai nom sg."
+    status: "validated"
+  - id: A-24
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Skolēni sveica jaunos skolotājus."
+    bad: "Skolēni sveica jauno skolotājus."
+    flag_token: "jauno"
+    notes: "skolotājus = acc pl; jauno (def acc sg vai def gen pl) šajā teikumā nedod derīgu nolasījumu — pārbaudīts. Paredzētā kļūda: skaitlis."
+    status: "validated"
+  - id: A-25
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Tūristi nakšņoja vecajās viesnīcās."
+    bad: "Tūristi nakšņoja vecajā viesnīcās."
+    flag_token: "vecajā"
+    notes: "viesnīcās = loc pl; vecajā = tikai loc sg."
+    status: "validated"
+  - id: A-26
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Zemnieks pārdod svaigu sieru."
+    bad: "Zemnieks pārdod svaigus sieru."
+    flag_token: "svaigus"
+    notes: "sieru = acc sg; svaigus = tikai acc pl — pretējais virziens (sg -> pl)."
+    status: "validated"
+  - id: A-27
+    family: "amod"
+    feature: "Case"
+    phenomenon: "coordination"
+    good: "Viņi nopirka lielu un gaišu dzīvokli."
+    bad: "Viņi nopirka lielu un gaišs dzīvokli."
+    flag_token: "gaišs"
+    notes: "Koordinēti adjektīvi pie viena lietvārda; otrais konjunkts gaišs = nom (vajag acc gaišu). Viena pazīme — locījums."
+    status: "validated"
+  - id: A-28
+    family: "amod"
+    feature: "Case"
+    phenomenon: "coordination"
+    good: "Viņa sapņo par klusu un siltu vasaru."
+    bad: "Viņa sapņo par klusu un silta vasaru."
+    flag_token: "silta"
+    notes: "par + acc; silta (masc gen sg vai fem nom sg) te nedod derīgu nolasījumu — locījuma pārkāpums otrajā konjunktā."
+    status: "validated"
+  - id: A-29
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "coordination"
+    good: "Uz palodzes stāv balta krūze un šķīvis."
+    bad: "Uz palodzes stāv balts krūze un šķīvis."
+    flag_token: "balts"
+    notes: "Adjektīvs saskaņojas ar tuvāko konjunktu (krūze, fem) -> balta; balts to pārkāpj. Slazds čekeriem, kas saskaņo ar attālāko šķīvis (masc)."
+    status: "validated"
+  - id: A-30
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "coordination"
+    good: "Veikalā pārdod svaigus ābolus un bumbierus."
+    bad: "Veikalā pārdod svaigas ābolus un bumbierus."
+    flag_token: "svaigas"
+    notes: "āboli = masc; svaigas fem formas (gen sg / nom pl / acc pl) šeit nedod derīgu nolasījumu. Dzimtes pārkāpums koordinācijas pirmajā konjunktā."
+    status: "validated"
+  - id: A-31
+    family: "amod"
+    feature: "Case"
+    phenomenon: "indeclinable"
+    good: "Viņa nopirka lillā šalli."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: lillā ir nelokāms adjektīvs — locījuma galotņu nav, pārkāpums nav konstruējams; čekeris nedrīkst flagot (EX-A5 shēma)."
+    status: "validated"
+  - id: A-32
+    family: "amod"
+    feature: "Number"
+    phenomenon: "indeclinable"
+    good: "Kastē bija bordo zeķes."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: bordo nelokāms; daudzskaitļa kontekstā forma nemainās — nav ko pārkāpt."
+    status: "validated"
+  - id: A-33
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "indeclinable"
+    good: "Karavīri valkā haki kreklus."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: haki nelokāms adjektīvs masc kontekstā."
+    status: "validated"
+  - id: A-34
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "indeclinable"
+    good: "Bērniem garšo rozā saldējums."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: rozā ar masc lietvārdu (EX-A5 bija fem kontekstā) — forma nemainās, flags būtu false positive."
+    status: "validated"
+  - id: A-35
+    family: "amod"
+    feature: "Number"
+    phenomenon: "numeral"
+    good: "Pagalmā stāv trīs veci koki."
+    bad: "Pagalmā stāv trīs vecs koki."
+    flag_token: "vecs"
+    notes: "Skaitļa vārda frāzē (trīs + pl) adjektīvs vecs = tikai nom sg — skaitļa pārkāpums."
+    status: "validated"
+  - id: A-36
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "numeral"
+    good: "Viņa nopirka divas zaļas vāzes."
+    bad: "Viņa nopirka divas zaļus vāzes."
+    flag_token: "zaļus"
+    notes: "vāzes = fem acc pl (divas); zaļus = tikai masc acc pl — dzimtes pārkāpums skaitļa vārda frāzē."
+    status: "validated"
+  - id: A-37
+    family: "amod"
+    feature: "Number"
+    phenomenon: "numeral"
+    good: "Somā ir pieci sarkani āboli."
+    bad: "Somā ir pieci sarkans āboli."
+    flag_token: "sarkans"
+    notes: "pieci + pl; sarkans = tikai nom sg."
+    status: "validated"
+  - id: A-38
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "numeral"
+    good: "Viņš iedeva konfektes diviem maziem bērniem."
+    bad: "Viņš iedeva konfektes diviem mazām bērniem."
+    flag_token: "mazām"
+    notes: "bērniem = masc dat pl; mazām = tikai fem dat pl. Skaitļa vārda frāzē (diviem)."
+    status: "validated"
+  - id: A-39
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "syncretism"
+    good: "Vecais vīrs sēž uz sola."
+    bad: "Vecā vīrs sēž uz sola."
+    flag_token: "Vecā"
+    notes: "Paredzētā kļūda: dzimte (vecā = fem nom sg, noteiktā galotne). SINKRĒTISMS: formai vecā pastāv arī masc gen sg nolasījums (vecā cilvēka vīrs — substantivēts piederības ģenitīvs), tāls, bet sintaktiski iespējams — parsera abstain šeit pieņemams (krīt coverage, ne precision)."
+    status: "validated"
+  - id: A-40
+    family: "amod"
+    feature: "Case"
+    phenomenon: "syncretism"
+    good: "Viesi apbrīnoja balto pili."
+    bad: "Viesi apbrīnoja baltā pili."
+    flag_token: "baltā"
+    notes: "Paredzētā kļūda: locījums (vajag acc balto). SINKRĒTISMS: baltā = fem nom sg / masc gen sg / loc sg — ģenitīva nolasījums (baltā kunga pili) formāli iespējams; abstain pieņemams."
+    status: "validated"
+  - id: A-41
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "syncretism"
+    good: "Baltā zirga pakavs karājas pie sienas."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: baltā šeit ir PAREIZS masc gen sg (saskan ar zirga), lai gan forma sakrīt ar fem nom sg — sinkrētiska forma pareizā lietojumā; čekeris nedrīkst flagot."
+    status: "validated"
+  - id: A-42
+    family: "amod"
+    feature: "Case"
+    phenomenon: "syncretism"
+    good: "Viņa dzīvo mazā ciematā."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: mazā = pareizs loc sg (saskan ar ciematā); forma sakrīt arī ar fem nom sg un masc gen sg. Nedrīkst flagot."
+    status: "validated"
+  - id: A-43
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "ellipsis"
+    good: "Man garšo zaļie āboli, bet brālim sarkanie."
+    bad: "Man garšo zaļie āboli, bet brālim sarkanās."
+    flag_token: "sarkanās"
+    notes: "Elidēts lietvārds (āboli, masc): substantivētajam adjektīvam jāpatur masc — sarkanās (fem) pārkāpj dzimti. Antecedents teikumā viennozīmīgs; ar fem antecedentu forma būtu pareiza — tāpēc elipses fenomens."
+    status: "validated"
+  - id: A-44
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "ellipsis"
+    good: "Vecā māja ir pārdota, jaunas vēl nav."
+    bad: "Vecā māja ir pārdota, jaunais vēl nav."
+    flag_token: "jaunais"
+    notes: "Elidēts lietvārds māja (fem); jaunais (masc) pārkāpj dzimti."
+    status: "validated"
+  - id: A-45
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "ellipsis"
+    good: "Veikalā bija daudz cimdu, un es nopirku siltos."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: substantivēts adjektīvs bez klātesoša lietvārda (elidēts cimdus) ir pareizs; čekeris bez galvas lietvārda nedrīkst flagot."
+    status: "validated"
+  - id: A-46
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "ellipsis"
+    good: "No visām kleitām viņa izvēlējās zilo."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: elidēts galvas lietvārds (kleitu); zilo ir pareizs — nedrīkst flagot."
+    status: "validated"
+  - id: A-47
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "participle"
+    good: "Izlasītās grāmatas stāv plauktā."
+    bad: "Izlasītie grāmatas stāv plauktā."
+    flag_token: "Izlasītie"
+    notes: "Divdabis kā apzīmētājs (VerbForm=Part): grāmatas = fem; izlasītie = TIKAI masc nom pl (noteiktā galotne) — viennozīmīga forma (EX-A4 mācība)."
+    status: "validated"
+  - id: A-48
+    family: "amod"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Smaidīgie bērni sveica viesus."
+    bad: "Smaidīgais bērni sveica viesus."
+    flag_token: "Smaidīgais"
+    notes: "bērni = nom pl; smaidīgais = tikai def nom sg — skaitļa pārkāpums. (2026-07-16: Jānis nomainīja divdabi smaidošie -> dabiskāku adjektīvu smaidīgie; sliktais dvīnis salāgots ar to pašu leksēmu un fenomens pārtagots participle -> plain, jo smaidīgs nav divdabis.)"
+    status: "validated"
+  - id: A-49
+    family: "amod"
+    feature: "Case"
+    phenomenon: "participle"
+    good: "Salauzto krēslu aiznesa uz pagrabu."
+    bad: "Salauztais krēslu aiznesa uz pagrabu."
+    flag_token: "Salauztais"
+    notes: "krēslu = acc sg; salauztais = tikai nom sg. Objekta fronting — dabiska vārdu secība."
+    status: "validated"
+  - id: A-50
+    family: "amod"
+    feature: "Gender"
+    phenomenon: "participle"
+    good: "Nopļauta zāle smaržo pēc vasaras."
+    bad: "Nopļautais zāle smaržo pēc vasaras."
+    flag_token: "Nopļautais"
+    notes: "zāle = fem; nopļautais = tikai masc nom sg (noteiktā galotne)."
+    status: "validated"
+  - id: N-01
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es strādāju birojā."
+    bad: "Es strādā birojā."
+    flag_token: "strādā"
+    notes: "1sg strādāju -> 3. pers. strādā; persona atklāti marķēta. Imperatīva nolasījums (tu strādā!) ar subjektu es nav derīgs — pārbaudīts."
+    status: "validated"
+  - id: N-02
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Tu lasi grāmatu."
+    bad: "Tu lasa grāmatu."
+    flag_token: "lasa"
+    notes: "2sg lasi -> 3. pers. lasa."
+    status: "validated"
+  - id: N-03
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Mēs dzeram kafiju."
+    bad: "Mēs dzerat kafiju."
+    flag_token: "dzerat"
+    notes: "1pl -> 2pl; abas formas pl, mainās tikai persona (EX-N2 shēma)."
+    status: "validated"
+  - id: N-04
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Jūs runājat pārāk ātri."
+    bad: "Jūs runājam pārāk ātri."
+    flag_token: "runājam"
+    notes: "2pl -> 1pl."
+    status: "validated"
+  - id: N-05
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es vakar biju teātrī."
+    bad: "Es vakar bija teātrī."
+    flag_token: "bija"
+    notes: "Pagātne: 1sg biju -> 3. pers. bija."
+    status: "validated"
+  - id: N-06
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Tu vakar strādāji ilgi."
+    bad: "Tu vakar strādāju ilgi."
+    flag_token: "strādāju"
+    notes: "Pagātne: 2sg -> 1sg."
+    status: "validated"
+  - id: N-07
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Mēs rīt brauksim uz jūru."
+    bad: "Mēs rīt brauks uz jūru."
+    flag_token: "brauks"
+    notes: "Nākotne: 1pl brauksim -> 3. pers. brauks."
+    status: "validated"
+  - id: N-08
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Jūs rīt saņemsiet vēstuli."
+    bad: "Jūs rīt saņemsim vēstuli."
+    flag_token: "saņemsim"
+    notes: "Nākotne: 2pl -> 1pl."
+    status: "validated"
+  - id: N-09
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Es dziedu korī."
+    bad: "Es dziedam korī."
+    flag_token: "dziedam"
+    notes: "1sg -> 1pl vienas personas ietvaros — tīrs skaitlis."
+    status: "validated"
+  - id: N-10
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Tu brauc ar riteni."
+    bad: "Tu braucat ar riteni."
+    flag_token: "braucat"
+    notes: "2sg -> 2pl. Jūs braucat (pieklājības forma) būtu gramatiska — tāpēc subjekts ir tu (EX-N5 mācība)."
+    status: "validated"
+  - id: N-11
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Mēs ceļojam katru vasaru."
+    bad: "Mēs ceļoju katru vasaru."
+    flag_token: "ceļoju"
+    notes: "1pl -> 1sg (ceļoju ir arī pagātnes 1sg — abos nolasījumos nesaskan ar mēs, tātad viennozīmīgi pārkāpums)."
+    status: "validated"
+  - id: N-12
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Jūs peldat katru rītu."
+    bad: "Jūs peldi katru rītu."
+    flag_token: "peldi"
+    notes: "2pl -> 2sg."
+    status: "validated"
+  - id: N-13
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es mazgājos katru rītu."
+    bad: "Es mazgājas katru rītu."
+    flag_token: "mazgājas"
+    notes: "Atgriezeniskais verbs (nsubj refleksīvā kvota, enum vērtības reflexive nav): 1sg mazgājos -> 3. pers. mazgājas."
+    status: "validated"
+  - id: N-14
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Tu smejies par jokiem."
+    bad: "Tu smejas par jokiem."
+    flag_token: "smejas"
+    notes: "Atgriezeniskais verbs: 2sg smejies -> 3. pers. smejas."
+    status: "validated"
+  - id: N-15
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Mēs tiksimies piektdien."
+    bad: "Mēs tiekaties piektdien."
+    flag_token: "tiekaties"
+    notes: "Atgriezeniskais verbs: 1pl -> 2pl."
+    status: "validated"
+  - id: N-16
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Es priecājos par dāvanu."
+    bad: "Es priecājamies par dāvanu."
+    flag_token: "priecājamies"
+    notes: "Atgriezeniskais verbs: 1sg -> 1pl — tīrs skaitlis."
+    status: "validated"
+  - id: N-17
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Viņš spēlē futbolu."
+    bad: "Viņš spēlēju futbolu."
+    flag_token: "spēlēju"
+    notes: "3. pers. -> 1sg; pretējais virziens (kļūda uz 1. personas formas)."
+    status: "validated"
+  - id: N-18
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Viņa redz jūru no loga."
+    bad: "Viņa redzi jūru no loga."
+    flag_token: "redzi"
+    notes: "3. pers. -> 2sg. Nominālais homonīms (redzi = redze acc sg) šeit nedod derīgu nolasījumu — teikums paliktu bez verba; pārbaudīts."
+    status: "validated"
+  - id: N-19
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Viņi spēlējas pagalmā."
+    bad: "Viņi spēlējamies pagalmā."
+    flag_token: "spēlējamies"
+    notes: "Atgriezeniskais verbs: 3. pers. -> 1pl."
+    status: "validated"
+  - id: N-20
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es rakstu vēstuli."
+    bad: "Es raksti vēstuli."
+    flag_token: "raksti"
+    notes: "1sg -> 2sg. Nominālais homonīms (raksti = nom pl no raksts) šeit nedod derīgu nolasījumu — bez verba; pārbaudīts."
+    status: "validated"
+  - id: N-21
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Tu zini atbildi."
+    bad: "Tu zinu atbildi."
+    flag_token: "zinu"
+    notes: "2sg -> 1sg."
+    status: "validated"
+  - id: N-22
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Mēs gājām garu ceļu."
+    bad: "Mēs gājāt garu ceļu."
+    flag_token: "gājāt"
+    notes: "Pagātne: 1pl -> 2pl."
+    status: "validated"
+  - id: N-23
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Jūs gaidāt autobusu."
+    bad: "Jūs gaidām autobusu."
+    flag_token: "gaidām"
+    notes: "2pl -> 1pl."
+    status: "validated"
+  - id: N-24
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "plain"
+    good: "Es rīt iešu pie ārsta."
+    bad: "Es rīt iesi pie ārsta."
+    flag_token: "iesi"
+    notes: "Nākotne: 1sg -> 2sg."
+    status: "validated"
+  - id: N-25
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Tu drīz sapratīsi visu."
+    bad: "Tu drīz sapratīsiet visu."
+    flag_token: "sapratīsiet"
+    notes: "Nākotne: 2sg -> 2pl. Jūs sapratīsiet (pieklājības forma) būtu gramatiska — tāpēc subjekts ir tu."
+    status: "validated"
+  - id: N-26
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "plain"
+    good: "Es atnācu agri."
+    bad: "Es atnācām agri."
+    flag_token: "atnācām"
+    notes: "Pagātne: 1sg -> 1pl."
+    status: "validated"
+  - id: N-27
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "coordination"
+    good: "Mēs ar brāli spēlējam šahu."
+    bad: "Mēs ar brāli spēlē šahu."
+    flag_token: "spēlē"
+    notes: "Komitatīvais subjekts (mēs ar brāli): kontrolieris ir mēs (1pl) -> spēlējam; spēlē (3. pers.) pārkāpj personu. Slazds: tuvākais lietvārds brāli ir 3sg (EX-N4 shēma)."
+    status: "validated"
+  - id: N-28
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "coordination"
+    good: "Mēs ar māsu dalāmies visā."
+    bad: "Mēs ar māsu dalās visā."
+    flag_token: "dalās"
+    notes: "Komitatīvais subjekts + atgriezeniskais verbs: dalāmies (1pl) -> dalās (3. pers.)."
+    status: "validated"
+  - id: N-29
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "coordination"
+    good: "Anna un Pēteris ir aizbraukuši uz laukiem."
+    bad: "Anna un Pēteris ir aizbraucis uz laukiem."
+    flag_token: "aizbraucis"
+    notes: "Koordinēts 3. pers. subjekts -> daudzskaitlis; skaitli atklāti marķē DIVDABIS (palīgverbs ir to nemarķē). Jaukta dzimte -> masc pl aizbraukuši; aizbraucis (sg) pārkāpj tikai skaitli."
+    status: "validated"
+  - id: N-30
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "coordination"
+    good: "Māte un meita šodien ir palikušas mājās."
+    bad: "Māte un meita šodien ir palikusi mājās."
+    flag_token: "palikusi"
+    notes: "Abas fem -> palikušas (fem pl); palikusi (fem sg) pārkāpj tikai skaitli. Skaitli marķē divdabis."
+    status: "validated"
+  - id: N-31
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Taksis jau gaida pie durvīm."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: 3. persona — gaida sg=pl, skaitlis nav marķēts; pārkāpums nav konstruējams, čekeris nedrīkst flagot. (2026-07-16: Jānis nomainīja nelokāmo taksi -> taksis, novēršot akuzatīva divdomību gaida taksi; fenomens pārtagots indeclinable -> syncretism, jo subjekts nu ir lokāms.)"
+    status: "validated"
+  - id: N-32
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "indeclinable"
+    good: "Foajē atrodas pirmajā stāvā."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: nelokāms subjekts (foajē); atrodas 3. pers. sg=pl."
+    status: "validated"
+  - id: N-33
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "indeclinable"
+    good: "Radio darbojas visu dienu."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: nelokāms subjekts (radio); darbojas 3. pers. — skaitlis nav marķēts."
+    status: "validated"
+  - id: N-34
+    family: "nsubj"
+    feature: "Gender"
+    phenomenon: "indeclinable"
+    good: "Kino šovakar ir pilns."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: kino = vīriešu dzimte pēc vienošanās; pilns saskan pareizi. Nelokāms subjekts nedrīkst izraisīt flagu."
+    status: "validated"
+  - id: N-35
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "numeral"
+    good: "Mēs abi strādājam vienā birojā."
+    bad: "Mēs abi strādā vienā birojā."
+    flag_token: "strādā"
+    notes: "Skaitļa vārds subjektā (mēs abi): kontrolieris mēs (1pl); strādā (3. pers.) pārkāpj personu."
+    status: "validated"
+  - id: N-36
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "numeral"
+    good: "Mēs trīs dzīvojam kopā."
+    bad: "Mēs trīs dzīvo kopā."
+    flag_token: "dzīvo"
+    notes: "Skaitļa vārds subjektā (mēs trīs): dzīvojam (1pl) -> dzīvo (3. pers.)."
+    status: "validated"
+  - id: N-37
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "numeral"
+    good: "Pieci bērni spēlējas pagalmā."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: skaitļa vārda subjekts 3. personā — spēlējas sg=pl, skaitlis nav atklāti marķēts; pārkāpums nav konstruējams (EX-N3 loģika)."
+    status: "validated"
+  - id: N-38
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "numeral"
+    good: "Divas māsas dzīvo Liepājā."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: 3. pers. dzīvo sg=pl — skaitļa vārds subjektā marķējumu nemaina."
+    status: "validated"
+  - id: N-39
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Kaķis guļ uz palodzes."
+    bad: null
+    flag_token: null
+    notes: "ABSTAIN etalons: 3. personā guļ sg=pl — tagadne (EX-N3 variants ar citu verbu, sg subjekts)."
+    status: "validated"
+  - id: N-40
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Viesi ieradās vakarā."
+    bad: null
+    flag_token: null
+    notes: "ABSTAIN etalons: pagātnē 3. pers. ieradās sg=pl (turklāt atgriezenisks) — skaitlis nav marķēts."
+    status: "validated"
+  - id: N-41
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Vilciens pienāks laikā."
+    bad: null
+    flag_token: null
+    notes: "ABSTAIN etalons: nākotnē 3. pers. pienāks sg=pl."
+    status: "validated"
+  - id: N-42
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "syncretism"
+    good: "Putni dzied kokos."
+    bad: null
+    flag_token: null
+    notes: "ABSTAIN etalons: 3. pers. dzied sg=pl — pl subjekts (pretstats N-39 sg subjektam)."
+    status: "validated"
+  - id: N-43
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "participle"
+    good: "Mēs esam atnākuši ciemos."
+    bad: "Mēs esam atnācis ciemos."
+    flag_token: "atnācis"
+    notes: "Salikta tagadne: skaitli marķē divdabis; esam (1pl) paliek pareizs, atnācis (sg) pārkāpj tikai skaitli."
+    status: "validated"
+  - id: N-44
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "participle"
+    good: "Tu esi nopelnījis atpūtu."
+    bad: "Tu esat nopelnījis atpūtu."
+    flag_token: "esat"
+    notes: "Pārkāpums uz PALĪGVERBA: tu -> esi (2sg); esat = 2pl. Uzmanību: ar subjektu Jūs (pieklājības forma) esat nopelnījis būtu gramatisks — tāpēc subjekts ir tu (EX-N5 mācība)."
+    status: "validated"
+  - id: N-45
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "participle"
+    good: "Es biju aizmirsis atslēgas."
+    bad: "Es biju aizmirsuši atslēgas."
+    flag_token: "aizmirsuši"
+    notes: "Salikta pagātne: biju (1sg) pareizs; aizmirsuši (masc pl) pārkāpj skaitli uz divdabja. Runātājs vīrietis (aizmirsis)."
+    status: "validated"
+  - id: N-46
+    family: "nsubj"
+    feature: "Number"
+    phenomenon: "participle"
+    good: "Viņas ir atgriezušās no ceļojuma."
+    bad: "Viņas ir atgriezusies no ceļojuma."
+    flag_token: "atgriezusies"
+    notes: "3. pers. fem pl: skaitli marķē tikai divdabis (ir nemarķē); atgriezusies (fem sg) pārkāpj tikai skaitli — dzimte saglabāta."
+    status: "validated"
+  - id: N-47
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "ellipsis"
+    good: "Es atnācu mājās un apsēdos pie galda."
+    bad: "Es atnācu mājās un apsēdās pie galda."
+    flag_token: "apsēdās"
+    notes: "Kopīgs (elidēts) subjekts otrajā sakārtojuma daļā: es -> apsēdos (1sg); apsēdās (3. pers.) pārkāpj personu. Reāls slop kļūdas tips."
+    status: "validated"
+  - id: N-48
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "ellipsis"
+    good: "Tu atvēri logu un ielaidi svaigu gaisu."
+    bad: "Tu atvēri logu un ielaida svaigu gaisu."
+    flag_token: "ielaida"
+    notes: "Kopīgs subjekts (tu) elidēts otrajā daļā: ielaidi (2sg) -> ielaida (3. pers.)."
+    status: "validated"
+  - id: N-49
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "ellipsis"
+    good: "Vakar strādāju līdz vēlam vakaram."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: izlaists subjekts (es) — pro-drop ir gramatisks; bez atklāta subjekta čekerim jāabstainē, nevis jāflagō."
+    status: "validated"
+  - id: N-50
+    family: "nsubj"
+    feature: "Person"
+    phenomenon: "ellipsis"
+    good: "Rīt tiksimies pie stacijas."
+    bad: null
+    flag_token: null
+    notes: "NEGATĪVĀ kontrole: izlaists subjekts (mēs) — pro-drop; flags te būtu false positive."
+    status: "validated"
+
+malformed:
+  - id: MF-01
+    input: "Teikums kas beidzas pusvār"
+    expect: no_crash
+  - id: MF-02
+    input: "svētdiena committed uz main branch ar force push"
+    expect: no_crash
+  - id: MF-03
+    input: "🚀🔥 čau čau 🎉 <div>html fragments</div>"
+    expect: no_crash
+  - id: MF-04
+    input: "if (x == null) { return; } // komentārs latviski"
+    expect: no_crash
+  - id: MF-05
+    input: ""
+    expect: no_crash
+  - id: MF-06
+    input: "ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā ā"
+    expect: no_crash
+  - id: MF-07
+    input: "Vārds	ar	tabiem
+un rindām"
+    expect: no_crash
+  - id: MF-08
+    input: "ļoooooooti gaaaaaarš vāāāārds bez jēgas asdfghjkl qwertyuiop"
+    expect: no_crash
+  - id: MF-09
+    input: "12345 67890 !@#$% ^&*() -=+[]{}"
+    expect: no_crash
+  - id: MF-10
+    input: "Русский текст un latviešu teksts mixed вместе vienā teikumā"
+    expect: no_crash

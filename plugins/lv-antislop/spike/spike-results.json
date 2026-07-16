@@ -1,0 +1,5901 @@
+{
+  "timestamp_utc": "2026-07-16T21:11:31.191907+00:00",
+  "frozen_sha256": "97ee930528d9d40da7e94657aa415aa8f71c7598a5ead3947435867e3d0cb6e4",
+  "pairs_evaluated": 110,
+  "violation_pairs": 88,
+  "model_id": "AiLab-IMCS-UL/lv_ud2.17_lv-deberta-base",
+  "model_load_seconds": 13.04,
+  "latency_ms": {
+    "cold": 500.0,
+    "warm_median": 258.6,
+    "warm_p95": 526.8,
+    "parses": 198
+  },
+  "peak_rss_mb": 889.8,
+  "malformed": [
+    {
+      "id": "MF-01",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-02",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-03",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-04",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-05",
+      "status": "ok",
+      "detail": "gate guards tukšu ievadi (MF-05)"
+    },
+    {
+      "id": "MF-06",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-07",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-08",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-09",
+      "status": "ok",
+      "detail": null
+    },
+    {
+      "id": "MF-10",
+      "status": "ok",
+      "detail": null
+    }
+  ],
+  "chosen": {
+    "threshold": null,
+    "tp": 72,
+    "fp": 1,
+    "precision": 0.9863,
+    "precision_wilson_lb": 0.9264,
+    "coverage": 0.8182,
+    "abstention": 0.0,
+    "examined_edges": 312,
+    "abstained_edges": 0,
+    "misses": [
+      "EX-A1",
+      "A-01",
+      "A-15",
+      "A-21",
+      "A-24",
+      "A-25",
+      "A-26",
+      "A-27",
+      "A-28",
+      "A-43",
+      "A-44",
+      "N-07",
+      "N-28",
+      "N-35",
+      "N-47",
+      "N-48"
+    ],
+    "false_positives": [
+      "EX-A5/good:rozā"
+    ]
+  },
+  "sweep": [
+    {
+      "threshold": null,
+      "tp": 72,
+      "fp": 1,
+      "precision_wilson_lb": 0.9264,
+      "coverage": 0.8182,
+      "abstention": 0.0
+    },
+    {
+      "threshold": 1.4625592827796936,
+      "tp": 72,
+      "fp": 1,
+      "precision_wilson_lb": 0.9264,
+      "coverage": 0.8182,
+      "abstention": 0.0
+    },
+    {
+      "threshold": 1.5240998268127441,
+      "tp": 71,
+      "fp": 1,
+      "precision_wilson_lb": 0.9254,
+      "coverage": 0.8068,
+      "abstention": 0.0032
+    },
+    {
+      "threshold": 1.6316839456558228,
+      "tp": 70,
+      "fp": 1,
+      "precision_wilson_lb": 0.9244,
+      "coverage": 0.7955,
+      "abstention": 0.0064
+    },
+    {
+      "threshold": 1.7037717401981354,
+      "tp": 69,
+      "fp": 1,
+      "precision_wilson_lb": 0.9234,
+      "coverage": 0.7841,
+      "abstention": 0.0096
+    },
+    {
+      "threshold": 2.245620220899582,
+      "tp": 68,
+      "fp": 1,
+      "precision_wilson_lb": 0.9224,
+      "coverage": 0.7727,
+      "abstention": 0.0128
+    },
+    {
+      "threshold": 2.4917394518852234,
+      "tp": 67,
+      "fp": 1,
+      "precision_wilson_lb": 0.9213,
+      "coverage": 0.7614,
+      "abstention": 0.016
+    },
+    {
+      "threshold": 2.5651455521583557,
+      "tp": 66,
+      "fp": 1,
+      "precision_wilson_lb": 0.9202,
+      "coverage": 0.75,
+      "abstention": 0.0192
+    },
+    {
+      "threshold": 2.6319884657859802,
+      "tp": 66,
+      "fp": 1,
+      "precision_wilson_lb": 0.9202,
+      "coverage": 0.75,
+      "abstention": 0.0224
+    },
+    {
+      "threshold": 2.697271764278412,
+      "tp": 65,
+      "fp": 1,
+      "precision_wilson_lb": 0.919,
+      "coverage": 0.7386,
+      "abstention": 0.0256
+    },
+    {
+      "threshold": 2.7131230235099792,
+      "tp": 65,
+      "fp": 1,
+      "precision_wilson_lb": 0.919,
+      "coverage": 0.7386,
+      "abstention": 0.0288
+    },
+    {
+      "threshold": 2.7620339393615723,
+      "tp": 64,
+      "fp": 1,
+      "precision_wilson_lb": 0.9179,
+      "coverage": 0.7273,
+      "abstention": 0.0321
+    },
+    {
+      "threshold": 2.768031358718872,
+      "tp": 64,
+      "fp": 1,
+      "precision_wilson_lb": 0.9179,
+      "coverage": 0.7273,
+      "abstention": 0.0353
+    },
+    {
+      "threshold": 2.781173586845398,
+      "tp": 64,
+      "fp": 1,
+      "precision_wilson_lb": 0.9179,
+      "coverage": 0.7273,
+      "abstention": 0.0385
+    },
+    {
+      "threshold": 2.7827825248241425,
+      "tp": 64,
+      "fp": 1,
+      "precision_wilson_lb": 0.9179,
+      "coverage": 0.7273,
+      "abstention": 0.0417
+    },
+    {
+      "threshold": 2.794737696647644,
+      "tp": 63,
+      "fp": 1,
+      "precision_wilson_lb": 0.9167,
+      "coverage": 0.7159,
+      "abstention": 0.0449
+    },
+    {
+      "threshold": 2.8024216294288635,
+      "tp": 62,
+      "fp": 1,
+      "precision_wilson_lb": 0.9154,
+      "coverage": 0.7045,
+      "abstention": 0.0481
+    },
+    {
+      "threshold": 2.8031758666038513,
+      "tp": 61,
+      "fp": 1,
+      "precision_wilson_lb": 0.9141,
+      "coverage": 0.6932,
+      "abstention": 0.0513
+    },
+    {
+      "threshold": 2.81139075756073,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0545
+    },
+    {
+      "threshold": 2.8116161227226257,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0577
+    },
+    {
+      "threshold": 2.8137741088867188,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0609
+    },
+    {
+      "threshold": 2.8218659162521362,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0641
+    },
+    {
+      "threshold": 2.8255366683006287,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0673
+    },
+    {
+      "threshold": 2.8402552008628845,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0705
+    },
+    {
+      "threshold": 2.8417983055114746,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0737
+    },
+    {
+      "threshold": 2.8482617139816284,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0769
+    },
+    {
+      "threshold": 2.8550126552581787,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0801
+    },
+    {
+      "threshold": 2.8567333817481995,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0833
+    },
+    {
+      "threshold": 2.8650633096694946,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0865
+    },
+    {
+      "threshold": 2.86646968126297,
+      "tp": 60,
+      "fp": 1,
+      "precision_wilson_lb": 0.9128,
+      "coverage": 0.6818,
+      "abstention": 0.0897
+    },
+    {
+      "threshold": 2.8716496229171753,
+      "tp": 59,
+      "fp": 1,
+      "precision_wilson_lb": 0.9114,
+      "coverage": 0.6705,
+      "abstention": 0.0929
+    },
+    {
+      "threshold": 2.8723201155662537,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.0962
+    },
+    {
+      "threshold": 2.8725454211235046,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.0994
+    },
+    {
+      "threshold": 2.873950958251953,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1026
+    },
+    {
+      "threshold": 2.87787663936615,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1058
+    },
+    {
+      "threshold": 2.8802676796913147,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.109
+    },
+    {
+      "threshold": 2.881255865097046,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1122
+    },
+    {
+      "threshold": 2.8812840580940247,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1154
+    },
+    {
+      "threshold": 2.8879635334014893,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1186
+    },
+    {
+      "threshold": 2.8934688568115234,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1218
+    },
+    {
+      "threshold": 2.899213969707489,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.125
+    },
+    {
+      "threshold": 2.9008560180664062,
+      "tp": 58,
+      "fp": 1,
+      "precision_wilson_lb": 0.91,
+      "coverage": 0.6591,
+      "abstention": 0.1282
+    },
+    {
+      "threshold": 2.9032042026519775,
+      "tp": 57,
+      "fp": 1,
+      "precision_wilson_lb": 0.9086,
+      "coverage": 0.6477,
+      "abstention": 0.1314
+    },
+    {
+      "threshold": 2.908903956413269,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1346
+    },
+    {
+      "threshold": 2.909290611743927,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1378
+    },
+    {
+      "threshold": 2.913387417793274,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.141
+    },
+    {
+      "threshold": 2.9152870774269104,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1442
+    },
+    {
+      "threshold": 2.916245698928833,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1474
+    },
+    {
+      "threshold": 2.91708767414093,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1506
+    },
+    {
+      "threshold": 2.917887806892395,
+      "tp": 56,
+      "fp": 1,
+      "precision_wilson_lb": 0.9071,
+      "coverage": 0.6364,
+      "abstention": 0.1538
+    },
+    {
+      "threshold": 2.9281997680664062,
+      "tp": 55,
+      "fp": 1,
+      "precision_wilson_lb": 0.9055,
+      "coverage": 0.625,
+      "abstention": 0.1571
+    },
+    {
+      "threshold": 2.9294105172157288,
+      "tp": 55,
+      "fp": 1,
+      "precision_wilson_lb": 0.9055,
+      "coverage": 0.625,
+      "abstention": 0.1603
+    },
+    {
+      "threshold": 2.9311370849609375,
+      "tp": 55,
+      "fp": 1,
+      "precision_wilson_lb": 0.9055,
+      "coverage": 0.625,
+      "abstention": 0.1635
+    },
+    {
+      "threshold": 2.93169903755188,
+      "tp": 54,
+      "fp": 1,
+      "precision_wilson_lb": 0.9039,
+      "coverage": 0.6136,
+      "abstention": 0.1667
+    },
+    {
+      "threshold": 2.9337711334228516,
+      "tp": 53,
+      "fp": 1,
+      "precision_wilson_lb": 0.9023,
+      "coverage": 0.6023,
+      "abstention": 0.1699
+    },
+    {
+      "threshold": 2.934796094894409,
+      "tp": 53,
+      "fp": 1,
+      "precision_wilson_lb": 0.9023,
+      "coverage": 0.6023,
+      "abstention": 0.1731
+    },
+    {
+      "threshold": 2.938309073448181,
+      "tp": 53,
+      "fp": 1,
+      "precision_wilson_lb": 0.9023,
+      "coverage": 0.6023,
+      "abstention": 0.1763
+    },
+    {
+      "threshold": 2.938794255256653,
+      "tp": 52,
+      "fp": 1,
+      "precision_wilson_lb": 0.9006,
+      "coverage": 0.5909,
+      "abstention": 0.1795
+    },
+    {
+      "threshold": 2.9423136711120605,
+      "tp": 51,
+      "fp": 1,
+      "precision_wilson_lb": 0.8988,
+      "coverage": 0.5795,
+      "abstention": 0.1827
+    },
+    {
+      "threshold": 2.943584442138672,
+      "tp": 50,
+      "fp": 1,
+      "precision_wilson_lb": 0.897,
+      "coverage": 0.5682,
+      "abstention": 0.1859
+    },
+    {
+      "threshold": 2.945096254348755,
+      "tp": 50,
+      "fp": 1,
+      "precision_wilson_lb": 0.897,
+      "coverage": 0.5682,
+      "abstention": 0.1891
+    },
+    {
+      "threshold": 2.9476012587547302,
+      "tp": 50,
+      "fp": 1,
+      "precision_wilson_lb": 0.897,
+      "coverage": 0.5682,
+      "abstention": 0.1923
+    },
+    {
+      "threshold": 2.9483102560043335,
+      "tp": 49,
+      "fp": 1,
+      "precision_wilson_lb": 0.895,
+      "coverage": 0.5568,
+      "abstention": 0.1955
+    },
+    {
+      "threshold": 2.953509569168091,
+      "tp": 49,
+      "fp": 1,
+      "precision_wilson_lb": 0.895,
+      "coverage": 0.5568,
+      "abstention": 0.1987
+    },
+    {
+      "threshold": 2.9545446038246155,
+      "tp": 49,
+      "fp": 1,
+      "precision_wilson_lb": 0.895,
+      "coverage": 0.5568,
+      "abstention": 0.2019
+    },
+    {
+      "threshold": 2.9571568965911865,
+      "tp": 49,
+      "fp": 1,
+      "precision_wilson_lb": 0.895,
+      "coverage": 0.5568,
+      "abstention": 0.2051
+    },
+    {
+      "threshold": 2.958792984485626,
+      "tp": 48,
+      "fp": 1,
+      "precision_wilson_lb": 0.8931,
+      "coverage": 0.5455,
+      "abstention": 0.2083
+    },
+    {
+      "threshold": 2.959566831588745,
+      "tp": 48,
+      "fp": 1,
+      "precision_wilson_lb": 0.8931,
+      "coverage": 0.5455,
+      "abstention": 0.2115
+    },
+    {
+      "threshold": 2.9613393545150757,
+      "tp": 48,
+      "fp": 1,
+      "precision_wilson_lb": 0.8931,
+      "coverage": 0.5455,
+      "abstention": 0.2147
+    },
+    {
+      "threshold": 2.9613834619522095,
+      "tp": 48,
+      "fp": 1,
+      "precision_wilson_lb": 0.8931,
+      "coverage": 0.5455,
+      "abstention": 0.2179
+    },
+    {
+      "threshold": 2.96225905418396,
+      "tp": 47,
+      "fp": 1,
+      "precision_wilson_lb": 0.891,
+      "coverage": 0.5341,
+      "abstention": 0.2212
+    },
+    {
+      "threshold": 2.965662658214569,
+      "tp": 46,
+      "fp": 1,
+      "precision_wilson_lb": 0.8889,
+      "coverage": 0.5227,
+      "abstention": 0.2244
+    },
+    {
+      "threshold": 2.9662171602249146,
+      "tp": 46,
+      "fp": 1,
+      "precision_wilson_lb": 0.8889,
+      "coverage": 0.5227,
+      "abstention": 0.2276
+    },
+    {
+      "threshold": 2.9721399545669556,
+      "tp": 45,
+      "fp": 1,
+      "precision_wilson_lb": 0.8866,
+      "coverage": 0.5114,
+      "abstention": 0.2308
+    },
+    {
+      "threshold": 2.9744922518730164,
+      "tp": 45,
+      "fp": 1,
+      "precision_wilson_lb": 0.8866,
+      "coverage": 0.5114,
+      "abstention": 0.234
+    },
+    {
+      "threshold": 2.9752827882766724,
+      "tp": 45,
+      "fp": 1,
+      "precision_wilson_lb": 0.8866,
+      "coverage": 0.5114,
+      "abstention": 0.2372
+    },
+    {
+      "threshold": 2.978416919708252,
+      "tp": 45,
+      "fp": 1,
+      "precision_wilson_lb": 0.8866,
+      "coverage": 0.5114,
+      "abstention": 0.2404
+    },
+    {
+      "threshold": 2.979788601398468,
+      "tp": 44,
+      "fp": 1,
+      "precision_wilson_lb": 0.8843,
+      "coverage": 0.5,
+      "abstention": 0.2436
+    },
+    {
+      "threshold": 2.980099678039551,
+      "tp": 44,
+      "fp": 1,
+      "precision_wilson_lb": 0.8843,
+      "coverage": 0.5,
+      "abstention": 0.2468
+    },
+    {
+      "threshold": 2.9801014065742493,
+      "tp": 43,
+      "fp": 1,
+      "precision_wilson_lb": 0.8819,
+      "coverage": 0.4886,
+      "abstention": 0.25
+    },
+    {
+      "threshold": 2.9809477627277374,
+      "tp": 43,
+      "fp": 1,
+      "precision_wilson_lb": 0.8819,
+      "coverage": 0.4886,
+      "abstention": 0.2532
+    },
+    {
+      "threshold": 2.985440492630005,
+      "tp": 42,
+      "fp": 1,
+      "precision_wilson_lb": 0.8794,
+      "coverage": 0.4773,
+      "abstention": 0.2564
+    },
+    {
+      "threshold": 2.9859598875045776,
+      "tp": 42,
+      "fp": 1,
+      "precision_wilson_lb": 0.8794,
+      "coverage": 0.4773,
+      "abstention": 0.2596
+    },
+    {
+      "threshold": 2.9871358275413513,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2628
+    },
+    {
+      "threshold": 2.987578511238098,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.266
+    },
+    {
+      "threshold": 2.9889272451400757,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2692
+    },
+    {
+      "threshold": 2.9904123544692993,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2724
+    },
+    {
+      "threshold": 2.9917156100273132,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2756
+    },
+    {
+      "threshold": 2.992133140563965,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2788
+    },
+    {
+      "threshold": 2.9923207759857178,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2821
+    },
+    {
+      "threshold": 2.999387204647064,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2853
+    },
+    {
+      "threshold": 3.0017915964126587,
+      "tp": 41,
+      "fp": 1,
+      "precision_wilson_lb": 0.8768,
+      "coverage": 0.4659,
+      "abstention": 0.2885
+    },
+    {
+      "threshold": 3.002344846725464,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.2917
+    },
+    {
+      "threshold": 3.0036932826042175,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.2949
+    },
+    {
+      "threshold": 3.005923628807068,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.2981
+    },
+    {
+      "threshold": 3.0070008635520935,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.3013
+    },
+    {
+      "threshold": 3.0074344277381897,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.3045
+    },
+    {
+      "threshold": 3.0078747272491455,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.3077
+    },
+    {
+      "threshold": 3.00872004032135,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.3109
+    },
+    {
+      "threshold": 3.0092281103134155,
+      "tp": 40,
+      "fp": 1,
+      "precision_wilson_lb": 0.874,
+      "coverage": 0.4545,
+      "abstention": 0.3141
+    },
+    {
+      "threshold": 3.013620972633362,
+      "tp": 39,
+      "fp": 1,
+      "precision_wilson_lb": 0.8712,
+      "coverage": 0.4432,
+      "abstention": 0.3173
+    },
+    {
+      "threshold": 3.0148510932922363,
+      "tp": 39,
+      "fp": 1,
+      "precision_wilson_lb": 0.8712,
+      "coverage": 0.4432,
+      "abstention": 0.3205
+    },
+    {
+      "threshold": 3.0152286887168884,
+      "tp": 39,
+      "fp": 1,
+      "precision_wilson_lb": 0.8712,
+      "coverage": 0.4432,
+      "abstention": 0.3237
+    },
+    {
+      "threshold": 3.0160040855407715,
+      "tp": 39,
+      "fp": 1,
+      "precision_wilson_lb": 0.8712,
+      "coverage": 0.4432,
+      "abstention": 0.3269
+    },
+    {
+      "threshold": 3.0164995789527893,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3301
+    },
+    {
+      "threshold": 3.0175849199295044,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3333
+    },
+    {
+      "threshold": 3.0189635157585144,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3365
+    },
+    {
+      "threshold": 3.0198433995246887,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3397
+    },
+    {
+      "threshold": 3.0218942165374756,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3429
+    },
+    {
+      "threshold": 3.0245100259780884,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3462
+    },
+    {
+      "threshold": 3.0321635603904724,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3494
+    },
+    {
+      "threshold": 3.032194435596466,
+      "tp": 38,
+      "fp": 1,
+      "precision_wilson_lb": 0.8682,
+      "coverage": 0.4318,
+      "abstention": 0.3526
+    },
+    {
+      "threshold": 3.0322160720825195,
+      "tp": 37,
+      "fp": 1,
+      "precision_wilson_lb": 0.865,
+      "coverage": 0.4205,
+      "abstention": 0.3558
+    },
+    {
+      "threshold": 3.034071683883667,
+      "tp": 37,
+      "fp": 1,
+      "precision_wilson_lb": 0.865,
+      "coverage": 0.4205,
+      "abstention": 0.359
+    },
+    {
+      "threshold": 3.0364387035369873,
+      "tp": 37,
+      "fp": 1,
+      "precision_wilson_lb": 0.865,
+      "coverage": 0.4205,
+      "abstention": 0.3622
+    },
+    {
+      "threshold": 3.037130355834961,
+      "tp": 37,
+      "fp": 1,
+      "precision_wilson_lb": 0.865,
+      "coverage": 0.4205,
+      "abstention": 0.3654
+    },
+    {
+      "threshold": 3.0382384061813354,
+      "tp": 37,
+      "fp": 1,
+      "precision_wilson_lb": 0.865,
+      "coverage": 0.4205,
+      "abstention": 0.3686
+    },
+    {
+      "threshold": 3.038323223590851,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3718
+    },
+    {
+      "threshold": 3.039337396621704,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.375
+    },
+    {
+      "threshold": 3.0398064255714417,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3782
+    },
+    {
+      "threshold": 3.041634678840637,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3814
+    },
+    {
+      "threshold": 3.042666792869568,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3846
+    },
+    {
+      "threshold": 3.0433318614959717,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3878
+    },
+    {
+      "threshold": 3.0440118312835693,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.391
+    },
+    {
+      "threshold": 3.044510245323181,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3942
+    },
+    {
+      "threshold": 3.0450310707092285,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.3974
+    },
+    {
+      "threshold": 3.045162558555603,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4006
+    },
+    {
+      "threshold": 3.0454987287521362,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4038
+    },
+    {
+      "threshold": 3.0460070371627808,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4071
+    },
+    {
+      "threshold": 3.046267032623291,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4103
+    },
+    {
+      "threshold": 3.047543942928314,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4135
+    },
+    {
+      "threshold": 3.0494507551193237,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4167
+    },
+    {
+      "threshold": 3.050870895385742,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4199
+    },
+    {
+      "threshold": 3.052193760871887,
+      "tp": 37,
+      "fp": 0,
+      "precision_wilson_lb": 0.9059,
+      "coverage": 0.4205,
+      "abstention": 0.4231
+    },
+    {
+      "threshold": 3.0535972118377686,
+      "tp": 36,
+      "fp": 0,
+      "precision_wilson_lb": 0.9036,
+      "coverage": 0.4091,
+      "abstention": 0.4263
+    },
+    {
+      "threshold": 3.054152190685272,
+      "tp": 36,
+      "fp": 0,
+      "precision_wilson_lb": 0.9036,
+      "coverage": 0.4091,
+      "abstention": 0.4295
+    },
+    {
+      "threshold": 3.057767152786255,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4327
+    },
+    {
+      "threshold": 3.058630585670471,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4359
+    },
+    {
+      "threshold": 3.0587834119796753,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4391
+    },
+    {
+      "threshold": 3.0601612329483032,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4423
+    },
+    {
+      "threshold": 3.0617457032203674,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4455
+    },
+    {
+      "threshold": 3.063372254371643,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4487
+    },
+    {
+      "threshold": 3.066619873046875,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4519
+    },
+    {
+      "threshold": 3.06670480966568,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4551
+    },
+    {
+      "threshold": 3.068127155303955,
+      "tp": 35,
+      "fp": 0,
+      "precision_wilson_lb": 0.9011,
+      "coverage": 0.3977,
+      "abstention": 0.4583
+    },
+    {
+      "threshold": 3.0696972608566284,
+      "tp": 34,
+      "fp": 0,
+      "precision_wilson_lb": 0.8985,
+      "coverage": 0.3864,
+      "abstention": 0.4615
+    },
+    {
+      "threshold": 3.0697430968284607,
+      "tp": 34,
+      "fp": 0,
+      "precision_wilson_lb": 0.8985,
+      "coverage": 0.3864,
+      "abstention": 0.4647
+    },
+    {
+      "threshold": 3.07106876373291,
+      "tp": 34,
+      "fp": 0,
+      "precision_wilson_lb": 0.8985,
+      "coverage": 0.3864,
+      "abstention": 0.4679
+    },
+    {
+      "threshold": 3.071895182132721,
+      "tp": 33,
+      "fp": 0,
+      "precision_wilson_lb": 0.8957,
+      "coverage": 0.375,
+      "abstention": 0.4712
+    },
+    {
+      "threshold": 3.0740137100219727,
+      "tp": 33,
+      "fp": 0,
+      "precision_wilson_lb": 0.8957,
+      "coverage": 0.375,
+      "abstention": 0.4744
+    },
+    {
+      "threshold": 3.0753806233406067,
+      "tp": 33,
+      "fp": 0,
+      "precision_wilson_lb": 0.8957,
+      "coverage": 0.375,
+      "abstention": 0.4776
+    },
+    {
+      "threshold": 3.0756278038024902,
+      "tp": 33,
+      "fp": 0,
+      "precision_wilson_lb": 0.8957,
+      "coverage": 0.375,
+      "abstention": 0.4808
+    },
+    {
+      "threshold": 3.0775439143180847,
+      "tp": 33,
+      "fp": 0,
+      "precision_wilson_lb": 0.8957,
+      "coverage": 0.375,
+      "abstention": 0.484
+    },
+    {
+      "threshold": 3.0800052881240845,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.4872
+    },
+    {
+      "threshold": 3.0809407234191895,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.4904
+    },
+    {
+      "threshold": 3.0823550820350647,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.4936
+    },
+    {
+      "threshold": 3.084252893924713,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.4968
+    },
+    {
+      "threshold": 3.0847935676574707,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5
+    },
+    {
+      "threshold": 3.086989939212799,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5032
+    },
+    {
+      "threshold": 3.0870736837387085,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5064
+    },
+    {
+      "threshold": 3.0926142930984497,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5096
+    },
+    {
+      "threshold": 3.0990231037139893,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5128
+    },
+    {
+      "threshold": 3.099092185497284,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.516
+    },
+    {
+      "threshold": 3.099847674369812,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5192
+    },
+    {
+      "threshold": 3.1003479957580566,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5224
+    },
+    {
+      "threshold": 3.1065137684345245,
+      "tp": 32,
+      "fp": 0,
+      "precision_wilson_lb": 0.8928,
+      "coverage": 0.3636,
+      "abstention": 0.5256
+    },
+    {
+      "threshold": 3.1115508675575256,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5288
+    },
+    {
+      "threshold": 3.1125771403312683,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5321
+    },
+    {
+      "threshold": 3.112787127494812,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5353
+    },
+    {
+      "threshold": 3.1133907437324524,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5385
+    },
+    {
+      "threshold": 3.1135424375534058,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5417
+    },
+    {
+      "threshold": 3.113711357116699,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5449
+    },
+    {
+      "threshold": 3.1183049082756042,
+      "tp": 31,
+      "fp": 0,
+      "precision_wilson_lb": 0.8897,
+      "coverage": 0.3523,
+      "abstention": 0.5481
+    },
+    {
+      "threshold": 3.120276689529419,
+      "tp": 30,
+      "fp": 0,
+      "precision_wilson_lb": 0.8865,
+      "coverage": 0.3409,
+      "abstention": 0.5513
+    },
+    {
+      "threshold": 3.1211212277412415,
+      "tp": 30,
+      "fp": 0,
+      "precision_wilson_lb": 0.8865,
+      "coverage": 0.3409,
+      "abstention": 0.5545
+    },
+    {
+      "threshold": 3.1214563846588135,
+      "tp": 30,
+      "fp": 0,
+      "precision_wilson_lb": 0.8865,
+      "coverage": 0.3409,
+      "abstention": 0.5577
+    },
+    {
+      "threshold": 3.1218072175979614,
+      "tp": 30,
+      "fp": 0,
+      "precision_wilson_lb": 0.8865,
+      "coverage": 0.3409,
+      "abstention": 0.5609
+    },
+    {
+      "threshold": 3.122055232524872,
+      "tp": 30,
+      "fp": 0,
+      "precision_wilson_lb": 0.8865,
+      "coverage": 0.3409,
+      "abstention": 0.5641
+    },
+    {
+      "threshold": 3.123379409313202,
+      "tp": 29,
+      "fp": 0,
+      "precision_wilson_lb": 0.883,
+      "coverage": 0.3295,
+      "abstention": 0.5673
+    },
+    {
+      "threshold": 3.1269257068634033,
+      "tp": 29,
+      "fp": 0,
+      "precision_wilson_lb": 0.883,
+      "coverage": 0.3295,
+      "abstention": 0.5705
+    },
+    {
+      "threshold": 3.1276602745056152,
+      "tp": 29,
+      "fp": 0,
+      "precision_wilson_lb": 0.883,
+      "coverage": 0.3295,
+      "abstention": 0.5737
+    },
+    {
+      "threshold": 3.128002107143402,
+      "tp": 29,
+      "fp": 0,
+      "precision_wilson_lb": 0.883,
+      "coverage": 0.3295,
+      "abstention": 0.5769
+    },
+    {
+      "threshold": 3.130900263786316,
+      "tp": 29,
+      "fp": 0,
+      "precision_wilson_lb": 0.883,
+      "coverage": 0.3295,
+      "abstention": 0.5801
+    },
+    {
+      "threshold": 3.133472740650177,
+      "tp": 28,
+      "fp": 0,
+      "precision_wilson_lb": 0.8794,
+      "coverage": 0.3182,
+      "abstention": 0.5833
+    },
+    {
+      "threshold": 3.1340365409851074,
+      "tp": 28,
+      "fp": 0,
+      "precision_wilson_lb": 0.8794,
+      "coverage": 0.3182,
+      "abstention": 0.5865
+    },
+    {
+      "threshold": 3.1366647481918335,
+      "tp": 28,
+      "fp": 0,
+      "precision_wilson_lb": 0.8794,
+      "coverage": 0.3182,
+      "abstention": 0.5897
+    },
+    {
+      "threshold": 3.1368666887283325,
+      "tp": 27,
+      "fp": 0,
+      "precision_wilson_lb": 0.8754,
+      "coverage": 0.3068,
+      "abstention": 0.5929
+    },
+    {
+      "threshold": 3.138553202152252,
+      "tp": 26,
+      "fp": 0,
+      "precision_wilson_lb": 0.8713,
+      "coverage": 0.2955,
+      "abstention": 0.5962
+    },
+    {
+      "threshold": 3.1421382427215576,
+      "tp": 26,
+      "fp": 0,
+      "precision_wilson_lb": 0.8713,
+      "coverage": 0.2955,
+      "abstention": 0.5994
+    },
+    {
+      "threshold": 3.1424912214279175,
+      "tp": 26,
+      "fp": 0,
+      "precision_wilson_lb": 0.8713,
+      "coverage": 0.2955,
+      "abstention": 0.6026
+    },
+    {
+      "threshold": 3.1425145268440247,
+      "tp": 25,
+      "fp": 0,
+      "precision_wilson_lb": 0.8668,
+      "coverage": 0.2841,
+      "abstention": 0.6058
+    },
+    {
+      "threshold": 3.1429574489593506,
+      "tp": 25,
+      "fp": 0,
+      "precision_wilson_lb": 0.8668,
+      "coverage": 0.2841,
+      "abstention": 0.609
+    },
+    {
+      "threshold": 3.144141912460327,
+      "tp": 24,
+      "fp": 0,
+      "precision_wilson_lb": 0.862,
+      "coverage": 0.2727,
+      "abstention": 0.6122
+    },
+    {
+      "threshold": 3.144163429737091,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6154
+    },
+    {
+      "threshold": 3.1480451822280884,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6186
+    },
+    {
+      "threshold": 3.149418592453003,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6218
+    },
+    {
+      "threshold": 3.15082648396492,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.625
+    },
+    {
+      "threshold": 3.1516683101654053,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6282
+    },
+    {
+      "threshold": 3.1529467403888702,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6314
+    },
+    {
+      "threshold": 3.1563369035720825,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6346
+    },
+    {
+      "threshold": 3.1663896441459656,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6378
+    },
+    {
+      "threshold": 3.1670820713043213,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.641
+    },
+    {
+      "threshold": 3.1672670245170593,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6442
+    },
+    {
+      "threshold": 3.171304404735565,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6474
+    },
+    {
+      "threshold": 3.1720367670059204,
+      "tp": 23,
+      "fp": 0,
+      "precision_wilson_lb": 0.8569,
+      "coverage": 0.2614,
+      "abstention": 0.6506
+    },
+    {
+      "threshold": 3.172097325325012,
+      "tp": 22,
+      "fp": 0,
+      "precision_wilson_lb": 0.8513,
+      "coverage": 0.25,
+      "abstention": 0.6538
+    },
+    {
+      "threshold": 3.1722097992897034,
+      "tp": 22,
+      "fp": 0,
+      "precision_wilson_lb": 0.8513,
+      "coverage": 0.25,
+      "abstention": 0.6571
+    },
+    {
+      "threshold": 3.173774003982544,
+      "tp": 21,
+      "fp": 0,
+      "precision_wilson_lb": 0.8454,
+      "coverage": 0.2386,
+      "abstention": 0.6603
+    },
+    {
+      "threshold": 3.1786478757858276,
+      "tp": 21,
+      "fp": 0,
+      "precision_wilson_lb": 0.8454,
+      "coverage": 0.2386,
+      "abstention": 0.6635
+    },
+    {
+      "threshold": 3.1797884106636047,
+      "tp": 21,
+      "fp": 0,
+      "precision_wilson_lb": 0.8454,
+      "coverage": 0.2386,
+      "abstention": 0.6667
+    },
+    {
+      "threshold": 3.180409550666809,
+      "tp": 20,
+      "fp": 0,
+      "precision_wilson_lb": 0.8389,
+      "coverage": 0.2273,
+      "abstention": 0.6699
+    },
+    {
+      "threshold": 3.182895243167877,
+      "tp": 20,
+      "fp": 0,
+      "precision_wilson_lb": 0.8389,
+      "coverage": 0.2273,
+      "abstention": 0.6731
+    },
+    {
+      "threshold": 3.1841877698898315,
+      "tp": 20,
+      "fp": 0,
+      "precision_wilson_lb": 0.8389,
+      "coverage": 0.2273,
+      "abstention": 0.6763
+    },
+    {
+      "threshold": 3.1850088834762573,
+      "tp": 20,
+      "fp": 0,
+      "precision_wilson_lb": 0.8389,
+      "coverage": 0.2273,
+      "abstention": 0.6795
+    },
+    {
+      "threshold": 3.1883974075317383,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6827
+    },
+    {
+      "threshold": 3.1894471645355225,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6859
+    },
+    {
+      "threshold": 3.191763699054718,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6891
+    },
+    {
+      "threshold": 3.1935232281684875,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6923
+    },
+    {
+      "threshold": 3.197103798389435,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6955
+    },
+    {
+      "threshold": 3.197569251060486,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.6987
+    },
+    {
+      "threshold": 3.2034047842025757,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7019
+    },
+    {
+      "threshold": 3.207159101963043,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7051
+    },
+    {
+      "threshold": 3.21002995967865,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7083
+    },
+    {
+      "threshold": 3.2180622220039368,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7115
+    },
+    {
+      "threshold": 3.2189440727233887,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7147
+    },
+    {
+      "threshold": 3.223396062850952,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7179
+    },
+    {
+      "threshold": 3.22549307346344,
+      "tp": 19,
+      "fp": 0,
+      "precision_wilson_lb": 0.8318,
+      "coverage": 0.2159,
+      "abstention": 0.7212
+    },
+    {
+      "threshold": 3.2258983850479126,
+      "tp": 18,
+      "fp": 0,
+      "precision_wilson_lb": 0.8241,
+      "coverage": 0.2045,
+      "abstention": 0.7244
+    },
+    {
+      "threshold": 3.2276812195777893,
+      "tp": 18,
+      "fp": 0,
+      "precision_wilson_lb": 0.8241,
+      "coverage": 0.2045,
+      "abstention": 0.7276
+    },
+    {
+      "threshold": 3.2337459921836853,
+      "tp": 18,
+      "fp": 0,
+      "precision_wilson_lb": 0.8241,
+      "coverage": 0.2045,
+      "abstention": 0.7308
+    },
+    {
+      "threshold": 3.238949179649353,
+      "tp": 18,
+      "fp": 0,
+      "precision_wilson_lb": 0.8241,
+      "coverage": 0.2045,
+      "abstention": 0.734
+    },
+    {
+      "threshold": 3.2393656969070435,
+      "tp": 18,
+      "fp": 0,
+      "precision_wilson_lb": 0.8241,
+      "coverage": 0.2045,
+      "abstention": 0.7372
+    },
+    {
+      "threshold": 3.240389108657837,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7404
+    },
+    {
+      "threshold": 3.2412456274032593,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7436
+    },
+    {
+      "threshold": 3.2490936517715454,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7468
+    },
+    {
+      "threshold": 3.256840765476227,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.75
+    },
+    {
+      "threshold": 3.2609180212020874,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7532
+    },
+    {
+      "threshold": 3.2617595195770264,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7564
+    },
+    {
+      "threshold": 3.263065278530121,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7596
+    },
+    {
+      "threshold": 3.2645747661590576,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7628
+    },
+    {
+      "threshold": 3.2653506994247437,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.766
+    },
+    {
+      "threshold": 3.265389561653137,
+      "tp": 17,
+      "fp": 0,
+      "precision_wilson_lb": 0.8157,
+      "coverage": 0.1932,
+      "abstention": 0.7692
+    },
+    {
+      "threshold": 3.267098546028137,
+      "tp": 16,
+      "fp": 0,
+      "precision_wilson_lb": 0.8064,
+      "coverage": 0.1818,
+      "abstention": 0.7724
+    },
+    {
+      "threshold": 3.2688074111938477,
+      "tp": 16,
+      "fp": 0,
+      "precision_wilson_lb": 0.8064,
+      "coverage": 0.1818,
+      "abstention": 0.7756
+    },
+    {
+      "threshold": 3.2721739411354065,
+      "tp": 16,
+      "fp": 0,
+      "precision_wilson_lb": 0.8064,
+      "coverage": 0.1818,
+      "abstention": 0.7788
+    },
+    {
+      "threshold": 3.275676906108856,
+      "tp": 16,
+      "fp": 0,
+      "precision_wilson_lb": 0.8064,
+      "coverage": 0.1818,
+      "abstention": 0.7821
+    },
+    {
+      "threshold": 3.2767615914344788,
+      "tp": 16,
+      "fp": 0,
+      "precision_wilson_lb": 0.8064,
+      "coverage": 0.1818,
+      "abstention": 0.7853
+    },
+    {
+      "threshold": 3.2804341316223145,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.7885
+    },
+    {
+      "threshold": 3.2949339747428894,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.7917
+    },
+    {
+      "threshold": 3.2990742921829224,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.7949
+    },
+    {
+      "threshold": 3.301822781562805,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.7981
+    },
+    {
+      "threshold": 3.307547688484192,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.8013
+    },
+    {
+      "threshold": 3.3109130263328552,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.8045
+    },
+    {
+      "threshold": 3.3125831484794617,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.8077
+    },
+    {
+      "threshold": 3.315779447555542,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.8109
+    },
+    {
+      "threshold": 3.3163806796073914,
+      "tp": 15,
+      "fp": 0,
+      "precision_wilson_lb": 0.7961,
+      "coverage": 0.1705,
+      "abstention": 0.8141
+    },
+    {
+      "threshold": 3.3164246678352356,
+      "tp": 14,
+      "fp": 0,
+      "precision_wilson_lb": 0.7847,
+      "coverage": 0.1591,
+      "abstention": 0.8173
+    },
+    {
+      "threshold": 3.321740508079529,
+      "tp": 13,
+      "fp": 0,
+      "precision_wilson_lb": 0.7719,
+      "coverage": 0.1477,
+      "abstention": 0.8205
+    },
+    {
+      "threshold": 3.3259227573871613,
+      "tp": 13,
+      "fp": 0,
+      "precision_wilson_lb": 0.7719,
+      "coverage": 0.1477,
+      "abstention": 0.8237
+    },
+    {
+      "threshold": 3.332673192024231,
+      "tp": 13,
+      "fp": 0,
+      "precision_wilson_lb": 0.7719,
+      "coverage": 0.1477,
+      "abstention": 0.8269
+    },
+    {
+      "threshold": 3.3369871377944946,
+      "tp": 12,
+      "fp": 0,
+      "precision_wilson_lb": 0.7575,
+      "coverage": 0.1364,
+      "abstention": 0.8301
+    },
+    {
+      "threshold": 3.338370621204376,
+      "tp": 12,
+      "fp": 0,
+      "precision_wilson_lb": 0.7575,
+      "coverage": 0.1364,
+      "abstention": 0.8333
+    },
+    {
+      "threshold": 3.3488943576812744,
+      "tp": 12,
+      "fp": 0,
+      "precision_wilson_lb": 0.7575,
+      "coverage": 0.1364,
+      "abstention": 0.8365
+    },
+    {
+      "threshold": 3.3494346141815186,
+      "tp": 12,
+      "fp": 0,
+      "precision_wilson_lb": 0.7575,
+      "coverage": 0.1364,
+      "abstention": 0.8397
+    },
+    {
+      "threshold": 3.359521448612213,
+      "tp": 11,
+      "fp": 0,
+      "precision_wilson_lb": 0.7412,
+      "coverage": 0.125,
+      "abstention": 0.8429
+    },
+    {
+      "threshold": 3.3736024498939514,
+      "tp": 11,
+      "fp": 0,
+      "precision_wilson_lb": 0.7412,
+      "coverage": 0.125,
+      "abstention": 0.8462
+    },
+    {
+      "threshold": 3.3744859099388123,
+      "tp": 11,
+      "fp": 0,
+      "precision_wilson_lb": 0.7412,
+      "coverage": 0.125,
+      "abstention": 0.8494
+    },
+    {
+      "threshold": 3.3755991458892822,
+      "tp": 11,
+      "fp": 0,
+      "precision_wilson_lb": 0.7412,
+      "coverage": 0.125,
+      "abstention": 0.8526
+    },
+    {
+      "threshold": 3.3805180191993713,
+      "tp": 11,
+      "fp": 0,
+      "precision_wilson_lb": 0.7412,
+      "coverage": 0.125,
+      "abstention": 0.8558
+    },
+    {
+      "threshold": 3.3913158178329468,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.859
+    },
+    {
+      "threshold": 3.3928183913230896,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8622
+    },
+    {
+      "threshold": 3.3949321508407593,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8654
+    },
+    {
+      "threshold": 3.4005889892578125,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8686
+    },
+    {
+      "threshold": 3.409595489501953,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8718
+    },
+    {
+      "threshold": 3.41108775138855,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.875
+    },
+    {
+      "threshold": 3.4144036769866943,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8782
+    },
+    {
+      "threshold": 3.4155352115631104,
+      "tp": 10,
+      "fp": 0,
+      "precision_wilson_lb": 0.7225,
+      "coverage": 0.1136,
+      "abstention": 0.8814
+    },
+    {
+      "threshold": 3.4211541414260864,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.8846
+    },
+    {
+      "threshold": 3.4267438650131226,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.8878
+    },
+    {
+      "threshold": 3.4303900599479675,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.891
+    },
+    {
+      "threshold": 3.4352608919143677,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.8942
+    },
+    {
+      "threshold": 3.435521125793457,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.8974
+    },
+    {
+      "threshold": 3.4419052600860596,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.9006
+    },
+    {
+      "threshold": 3.4437894225120544,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.9038
+    },
+    {
+      "threshold": 3.456742584705353,
+      "tp": 9,
+      "fp": 0,
+      "precision_wilson_lb": 0.7008,
+      "coverage": 0.1023,
+      "abstention": 0.9071
+    },
+    {
+      "threshold": 3.4573599100112915,
+      "tp": 8,
+      "fp": 0,
+      "precision_wilson_lb": 0.6756,
+      "coverage": 0.0909,
+      "abstention": 0.9103
+    },
+    {
+      "threshold": 3.457570731639862,
+      "tp": 8,
+      "fp": 0,
+      "precision_wilson_lb": 0.6756,
+      "coverage": 0.0909,
+      "abstention": 0.9135
+    },
+    {
+      "threshold": 3.458721339702606,
+      "tp": 8,
+      "fp": 0,
+      "precision_wilson_lb": 0.6756,
+      "coverage": 0.0909,
+      "abstention": 0.9167
+    },
+    {
+      "threshold": 3.4589491486549377,
+      "tp": 8,
+      "fp": 0,
+      "precision_wilson_lb": 0.6756,
+      "coverage": 0.0909,
+      "abstention": 0.9199
+    },
+    {
+      "threshold": 3.461357831954956,
+      "tp": 7,
+      "fp": 0,
+      "precision_wilson_lb": 0.6457,
+      "coverage": 0.0795,
+      "abstention": 0.9231
+    },
+    {
+      "threshold": 3.463797450065613,
+      "tp": 7,
+      "fp": 0,
+      "precision_wilson_lb": 0.6457,
+      "coverage": 0.0795,
+      "abstention": 0.9263
+    },
+    {
+      "threshold": 3.4668394327163696,
+      "tp": 7,
+      "fp": 0,
+      "precision_wilson_lb": 0.6457,
+      "coverage": 0.0795,
+      "abstention": 0.9295
+    },
+    {
+      "threshold": 3.4727827310562134,
+      "tp": 6,
+      "fp": 0,
+      "precision_wilson_lb": 0.6097,
+      "coverage": 0.0682,
+      "abstention": 0.9327
+    },
+    {
+      "threshold": 3.4734742641448975,
+      "tp": 5,
+      "fp": 0,
+      "precision_wilson_lb": 0.5655,
+      "coverage": 0.0568,
+      "abstention": 0.9359
+    },
+    {
+      "threshold": 3.489337921142578,
+      "tp": 5,
+      "fp": 0,
+      "precision_wilson_lb": 0.5655,
+      "coverage": 0.0568,
+      "abstention": 0.9391
+    },
+    {
+      "threshold": 3.50599205493927,
+      "tp": 5,
+      "fp": 0,
+      "precision_wilson_lb": 0.5655,
+      "coverage": 0.0568,
+      "abstention": 0.9423
+    },
+    {
+      "threshold": 3.519223213195801,
+      "tp": 5,
+      "fp": 0,
+      "precision_wilson_lb": 0.5655,
+      "coverage": 0.0568,
+      "abstention": 0.9455
+    },
+    {
+      "threshold": 3.5198821425437927,
+      "tp": 4,
+      "fp": 0,
+      "precision_wilson_lb": 0.5101,
+      "coverage": 0.0455,
+      "abstention": 0.9487
+    },
+    {
+      "threshold": 3.5290238857269287,
+      "tp": 4,
+      "fp": 0,
+      "precision_wilson_lb": 0.5101,
+      "coverage": 0.0455,
+      "abstention": 0.9519
+    },
+    {
+      "threshold": 3.5416993498802185,
+      "tp": 4,
+      "fp": 0,
+      "precision_wilson_lb": 0.5101,
+      "coverage": 0.0455,
+      "abstention": 0.9551
+    },
+    {
+      "threshold": 3.548502564430237,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9583
+    },
+    {
+      "threshold": 3.5628421306610107,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9615
+    },
+    {
+      "threshold": 3.5808448791503906,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9647
+    },
+    {
+      "threshold": 3.597445547580719,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9679
+    },
+    {
+      "threshold": 3.6362210512161255,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9712
+    },
+    {
+      "threshold": 3.6378674507141113,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9744
+    },
+    {
+      "threshold": 3.658012866973877,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9776
+    },
+    {
+      "threshold": 3.672894835472107,
+      "tp": 3,
+      "fp": 0,
+      "precision_wilson_lb": 0.4385,
+      "coverage": 0.0341,
+      "abstention": 0.9808
+    },
+    {
+      "threshold": 3.675279438495636,
+      "tp": 2,
+      "fp": 0,
+      "precision_wilson_lb": 0.3424,
+      "coverage": 0.0227,
+      "abstention": 0.984
+    },
+    {
+      "threshold": 3.6809180974960327,
+      "tp": 2,
+      "fp": 0,
+      "precision_wilson_lb": 0.3424,
+      "coverage": 0.0227,
+      "abstention": 0.9872
+    },
+    {
+      "threshold": 3.6979026794433594,
+      "tp": 2,
+      "fp": 0,
+      "precision_wilson_lb": 0.3424,
+      "coverage": 0.0227,
+      "abstention": 0.9904
+    },
+    {
+      "threshold": 3.741459310054779,
+      "tp": 1,
+      "fp": 0,
+      "precision_wilson_lb": 0.2065,
+      "coverage": 0.0114,
+      "abstention": 0.9936
+    },
+    {
+      "threshold": 3.8256725668907166,
+      "tp": 0,
+      "fp": 0,
+      "precision_wilson_lb": 0.0,
+      "coverage": 0.0,
+      "abstention": 0.9968
+    }
+  ],
+  "gates": {
+    "precision_wilson_lb": 0.9,
+    "coverage": 0.7,
+    "abstention": 0.3,
+    "cold_ms": 1000.0,
+    "warm_median_ms": 500.0,
+    "peak_rss_mb": 2048.0
+  },
+  "verdict": {
+    "precision_wilson_lb": true,
+    "coverage": true,
+    "abstention": true,
+    "cold_le_1000ms": true,
+    "warm_median_le_500ms": true,
+    "peak_rss_le_2048mb": true,
+    "malformed_no_crash": true
+  },
+  "spike_pass": true,
+  "records": [
+    {
+      "id": "EX-A1",
+      "family": "amod",
+      "flag_token": "zaļa",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "zaļš",
+          "family": "amod",
+          "margin": 2.9801014065742493,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "aug",
+          "family": "nsubj",
+          "margin": 2.9904123544692993,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "zaļa",
+          "family": "amod",
+          "margin": 2.916245698928833,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "aug",
+          "family": "nsubj",
+          "margin": 2.91708767414093,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "EX-A2",
+      "family": "amod",
+      "flag_token": "liela",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "redzu",
+          "family": "nsubj",
+          "margin": 2.881255865097046,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lielu",
+          "family": "amod",
+          "margin": 3.0753806233406067,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "redzu",
+          "family": "nsubj",
+          "margin": 2.81139075756073,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "liela",
+          "family": "amod",
+          "margin": 2.86646968126297,
+          "flags": [
+            "amod/Case",
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX-A3",
+      "family": "amod",
+      "flag_token": "Mazais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Mazie",
+          "family": "amod",
+          "margin": 2.9152870774269104,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 3.0617457032203674,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Mazais",
+          "family": "amod",
+          "margin": 1.7037717401981354,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 2.8725454211235046,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "EX-A4",
+      "family": "amod",
+      "flag_token": "Paveiktie",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Paveiktais",
+          "family": "amod",
+          "margin": 3.197569251060486,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "deva",
+          "family": "nsubj",
+          "margin": 3.149418592453003,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Paveiktie",
+          "family": "amod",
+          "margin": 2.7131230235099792,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "deva",
+          "family": "nsubj",
+          "margin": 3.238949179649353,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "EX-A5",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "valkāja",
+          "family": "nsubj",
+          "margin": 2.9721399545669556,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "rozā",
+          "family": "amod",
+          "margin": 3.0382384061813354,
+          "flags": [
+            "amod/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX-N1",
+      "family": "nsubj",
+      "flag_token": "ej",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "eju",
+          "family": "nsubj",
+          "margin": 2.913387417793274,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "ej",
+          "family": "nsubj",
+          "margin": 2.8031758666038513,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX-N2",
+      "family": "nsubj",
+      "flag_token": "strādājat",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādājam",
+          "family": "nsubj",
+          "margin": 2.8255366683006287,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādājat",
+          "family": "nsubj",
+          "margin": 2.938309073448181,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX-N5",
+      "family": "nsubj",
+      "flag_token": "strādājat",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādā",
+          "family": "nsubj",
+          "margin": 2.8567333817481995,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādājat",
+          "family": "nsubj",
+          "margin": 3.2393656969070435,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EX-N3",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "skrien",
+          "family": "nsubj",
+          "margin": 2.9744922518730164,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "EX-N4",
+      "family": "nsubj",
+      "flag_token": "iet",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "ejam",
+          "family": "nsubj",
+          "margin": 3.4352608919143677,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "iet",
+          "family": "nsubj",
+          "margin": 1.6316839456558228,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-01",
+      "family": "amod",
+      "flag_token": "silts",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "siltā",
+          "family": "amod",
+          "margin": 2.781173586845398,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "smaržo",
+          "family": "nsubj",
+          "margin": 2.8417983055114746,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "silts",
+          "family": "amod",
+          "margin": 3.0440118312835693,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "smaržo",
+          "family": "nsubj",
+          "margin": 3.0364387035369873,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-02",
+      "family": "amod",
+      "flag_token": "zils",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "zila",
+          "family": "amod",
+          "margin": 2.8934688568115234,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.050870895385742,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "zils",
+          "family": "amod",
+          "margin": 2.9311370849609375,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.0870736837387085,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-03",
+      "family": "amod",
+      "flag_token": "jaunus",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "lasa",
+          "family": "nsubj",
+          "margin": 3.013620972633362,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jaunas",
+          "family": "amod",
+          "margin": 3.0164995789527893,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "lasa",
+          "family": "nsubj",
+          "margin": 3.047543942928314,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jaunus",
+          "family": "amod",
+          "margin": 2.93169903755188,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-04",
+      "family": "amod",
+      "flag_token": "mazajai",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdzēja",
+          "family": "nsubj",
+          "margin": 3.0321635603904724,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazajam",
+          "family": "amod",
+          "margin": 3.138553202152252,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdzēja",
+          "family": "nsubj",
+          "margin": 3.071895182132721,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazajai",
+          "family": "amod",
+          "margin": 3.1797884106636047,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-05",
+      "family": "amod",
+      "flag_token": "veciem",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdz",
+          "family": "nsubj",
+          "margin": 3.1516683101654053,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "vecām",
+          "family": "amod",
+          "margin": 3.171304404735565,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdz",
+          "family": "nsubj",
+          "margin": 3.0587834119796753,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "veciem",
+          "family": "amod",
+          "margin": 3.4589491486549377,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-06",
+      "family": "amod",
+      "flag_token": "karsts",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "karsta",
+          "family": "amod",
+          "margin": 3.042666792869568,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "kūp",
+          "family": "nsubj",
+          "margin": 3.0148510932922363,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "karsts",
+          "family": "amod",
+          "margin": 3.2767615914344788,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "kūp",
+          "family": "nsubj",
+          "margin": 3.1269257068634033,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-07",
+      "family": "amod",
+      "flag_token": "jaunām",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "uzticas",
+          "family": "nsubj",
+          "margin": 2.999387204647064,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jauniem",
+          "family": "amod",
+          "margin": 3.321740508079529,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "uzticas",
+          "family": "nsubj",
+          "margin": 2.979788601398468,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jaunām",
+          "family": "amod",
+          "margin": 3.3163806796073914,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-08",
+      "family": "amod",
+      "flag_token": "zaļus",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "zīmē",
+          "family": "nsubj",
+          "margin": 3.039337396621704,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "zaļas",
+          "family": "amod",
+          "margin": 2.8550126552581787,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "zīmē",
+          "family": "nsubj",
+          "margin": 3.084252893924713,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "zaļus",
+          "family": "amod",
+          "margin": 2.9032042026519775,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-09",
+      "family": "amod",
+      "flag_token": "vecs",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "apciemojam",
+          "family": "nsubj",
+          "margin": 2.9483102560043335,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "vecu",
+          "family": "amod",
+          "margin": 2.9545446038246155,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "apciemojam",
+          "family": "nsubj",
+          "margin": 3.0189635157585144,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "vecs",
+          "family": "amod",
+          "margin": 2.6319884657859802,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-10",
+      "family": "amod",
+      "flag_token": "mazs",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "pieder",
+          "family": "nsubj",
+          "margin": 3.0696972608566284,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazam",
+          "family": "amod",
+          "margin": 3.0245100259780884,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "pieder",
+          "family": "nsubj",
+          "margin": 3.180409550666809,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazs",
+          "family": "amod",
+          "margin": 3.519223213195801,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-11",
+      "family": "amod",
+      "flag_token": "lielai",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzīvo",
+          "family": "nsubj",
+          "margin": 3.044510245323181,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lielā",
+          "family": "amod",
+          "margin": 3.1425145268440247,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzīvo",
+          "family": "nsubj",
+          "margin": 3.120276689529419,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lielai",
+          "family": "amod",
+          "margin": 3.3494346141815186,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-12",
+      "family": "amod",
+      "flag_token": "mīkstu",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "guļ",
+          "family": "nsubj",
+          "margin": 3.038323223590851,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "mīkstas",
+          "family": "amod",
+          "margin": 3.1211212277412415,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "guļ",
+          "family": "nsubj",
+          "margin": 3.1133907437324524,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "mīkstu",
+          "family": "amod",
+          "margin": 3.0775439143180847,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-13",
+      "family": "amod",
+      "flag_token": "mazam",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 3.099847674369812,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "mazu",
+          "family": "amod",
+          "margin": 3.301822781562805,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 3.113711357116699,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "mazam",
+          "family": "amod",
+          "margin": 3.1722097992897034,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-14",
+      "family": "amod",
+      "flag_token": "tālai",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "atgriezās",
+          "family": "nsubj",
+          "margin": 3.2034047842025757,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "tālas",
+          "family": "amod",
+          "margin": 3.133472740650177,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "atgriezās",
+          "family": "nsubj",
+          "margin": 3.2609180212020874,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "tālai",
+          "family": "amod",
+          "margin": 3.4155352115631104,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-15",
+      "family": "amod",
+      "flag_token": "brūnais",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "guļ",
+          "family": "nsubj",
+          "margin": 3.0074344277381897,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "brūnā",
+          "family": "amod",
+          "margin": 3.3949321508407593,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "guļ",
+          "family": "nsubj",
+          "margin": 3.1340365409851074,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "brūnais",
+          "family": "amod",
+          "margin": 3.461357831954956,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-16",
+      "family": "amod",
+      "flag_token": "zaļajā",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "skrien",
+          "family": "nsubj",
+          "margin": 3.063372254371643,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "zaļo",
+          "family": "amod",
+          "margin": 3.0697430968284607,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "skrien",
+          "family": "nsubj",
+          "margin": 3.1276602745056152,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "zaļajā",
+          "family": "amod",
+          "margin": 3.052193760871887,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-17",
+      "family": "amod",
+      "flag_token": "gudrajai",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "lepojas",
+          "family": "nsubj",
+          "margin": 3.1883974075317383,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "gudro",
+          "family": "amod",
+          "margin": 3.1421382427215576,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "lepojas",
+          "family": "nsubj",
+          "margin": 3.0460070371627808,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "gudrajai",
+          "family": "amod",
+          "margin": 2.9859598875045776,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-18",
+      "family": "amod",
+      "flag_token": "Vecais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecie",
+          "family": "amod",
+          "margin": 3.0322160720825195,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "met",
+          "family": "nsubj",
+          "margin": 2.992133140563965,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecais",
+          "family": "amod",
+          "margin": 1.4625592827796936,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "met",
+          "family": "nsubj",
+          "margin": 3.0152286887168884,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-19",
+      "family": "amod",
+      "flag_token": "Jaunais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Jaunie",
+          "family": "amod",
+          "margin": 3.1663896441459656,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "trenējas",
+          "family": "nsubj",
+          "margin": 3.1894471645355225,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Jaunais",
+          "family": "amod",
+          "margin": 2.7827825248241425,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "trenējas",
+          "family": "nsubj",
+          "margin": 3.2258983850479126,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-20",
+      "family": "amod",
+      "flag_token": "baltajai",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dod",
+          "family": "nsubj",
+          "margin": 3.1672670245170593,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "baltajām",
+          "family": "amod",
+          "margin": 3.3125831484794617,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "dod",
+          "family": "nsubj",
+          "margin": 3.197103798389435,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "baltajai",
+          "family": "amod",
+          "margin": 3.741459310054779,
+          "flags": [
+            "amod/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-21",
+      "family": "amod",
+      "flag_token": "smagu",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "nes",
+          "family": "nsubj",
+          "margin": 3.1935232281684875,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "smagus",
+          "family": "amod",
+          "margin": 2.908903956413269,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "nes",
+          "family": "nsubj",
+          "margin": 3.182895243167877,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "smagu",
+          "family": "amod",
+          "margin": 3.173774003982544,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-22",
+      "family": "amod",
+      "flag_token": "mazajam",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdz",
+          "family": "nsubj",
+          "margin": 2.9337711334228516,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazajiem",
+          "family": "amod",
+          "margin": 3.1115508675575256,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "palīdz",
+          "family": "nsubj",
+          "margin": 2.9917156100273132,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazajam",
+          "family": "amod",
+          "margin": 3.1065137684345245,
+          "flags": [
+            "amod/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-23",
+      "family": "amod",
+      "flag_token": "Melns",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Melni",
+          "family": "amod",
+          "margin": 3.0823550820350647,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "krājas",
+          "family": "nsubj",
+          "margin": 3.223396062850952,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Melns",
+          "family": "amod",
+          "margin": 3.032194435596466,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "krājas",
+          "family": "nsubj",
+          "margin": 3.263065278530121,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-24",
+      "family": "amod",
+      "flag_token": "jauno",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "sveica",
+          "family": "nsubj",
+          "margin": 3.002344846725464,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jaunos",
+          "family": "amod",
+          "margin": 3.128002107143402,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "sveica",
+          "family": "nsubj",
+          "margin": 2.985440492630005,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "jauno",
+          "family": "amod",
+          "margin": 2.8812840580940247,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-25",
+      "family": "amod",
+      "flag_token": "vecajā",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "nakšņoja",
+          "family": "nsubj",
+          "margin": 3.0070008635520935,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "vecajās",
+          "family": "amod",
+          "margin": 3.2721739411354065,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "nakšņoja",
+          "family": "nsubj",
+          "margin": 2.873950958251953,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "vecajā",
+          "family": "amod",
+          "margin": 3.2688074111938477,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-26",
+      "family": "amod",
+      "flag_token": "svaigus",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "pārdod",
+          "family": "nsubj",
+          "margin": 2.959566831588745,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "svaigu",
+          "family": "amod",
+          "margin": 2.8723201155662537,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "pārdod",
+          "family": "nsubj",
+          "margin": 2.987578511238098,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "svaigus",
+          "family": "amod",
+          "margin": 2.9923207759857178,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-27",
+      "family": "amod",
+      "flag_token": "gaišs",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "nopirka",
+          "family": "nsubj",
+          "margin": 3.2949339747428894,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lielu",
+          "family": "amod",
+          "margin": 3.338370621204376,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "nopirka",
+          "family": "nsubj",
+          "margin": 3.2653506994247437,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lielu",
+          "family": "amod",
+          "margin": 3.315779447555542,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-28",
+      "family": "amod",
+      "flag_token": "silta",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "sapņo",
+          "family": "nsubj",
+          "margin": 3.4437894225120544,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "klusu",
+          "family": "amod",
+          "margin": 3.4211541414260864,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "sapņo",
+          "family": "nsubj",
+          "margin": 3.4005889892578125,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "klusu",
+          "family": "amod",
+          "margin": 3.3736024498939514,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-29",
+      "family": "amod",
+      "flag_token": "balts",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "balta",
+          "family": "amod",
+          "margin": 3.4144036769866943,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.5290238857269287,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "balts",
+          "family": "amod",
+          "margin": 3.4668394327163696,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.5628421306610107,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-30",
+      "family": "amod",
+      "flag_token": "svaigas",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "svaigus",
+          "family": "amod",
+          "margin": 3.267098546028137,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "svaigas",
+          "family": "amod",
+          "margin": 2.8716496229171753,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-31",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "nopirka",
+          "family": "nsubj",
+          "margin": 2.899213969707489,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "lillā",
+          "family": "amod",
+          "margin": 3.2412456274032593,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-32",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "bija",
+          "family": "nsubj",
+          "margin": 2.768031358718872,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-33",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "valkā",
+          "family": "nsubj",
+          "margin": 2.8802676796913147,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-34",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "rozā",
+          "family": "amod",
+          "margin": 2.8879635334014893,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "garšo",
+          "family": "nsubj",
+          "margin": 2.8650633096694946,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-35",
+      "family": "amod",
+      "flag_token": "vecs",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "veci",
+          "family": "amod",
+          "margin": 3.0740137100219727,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.1135424375534058,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "vecs",
+          "family": "amod",
+          "margin": 2.794737696647644,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.0800052881240845,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-36",
+      "family": "amod",
+      "flag_token": "zaļus",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "nopirka",
+          "family": "nsubj",
+          "margin": 3.005923628807068,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "zaļas",
+          "family": "amod",
+          "margin": 3.3744859099388123,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "nopirka",
+          "family": "nsubj",
+          "margin": 2.965662658214569,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "zaļus",
+          "family": "amod",
+          "margin": 3.122055232524872,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-37",
+      "family": "amod",
+      "flag_token": "sarkans",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "sarkani",
+          "family": "amod",
+          "margin": 3.144163429737091,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.00872004032135,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "sarkans",
+          "family": "amod",
+          "margin": 2.938794255256653,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 2.958792984485626,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-38",
+      "family": "amod",
+      "flag_token": "mazām",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "iedeva",
+          "family": "nsubj",
+          "margin": 3.2990742921829224,
+          "flags": []
+        },
+        {
+          "token_index": 5,
+          "token": "maziem",
+          "family": "amod",
+          "margin": 3.4303900599479675,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "iedeva",
+          "family": "nsubj",
+          "margin": 3.275676906108856,
+          "flags": []
+        },
+        {
+          "token_index": 5,
+          "token": "mazām",
+          "family": "amod",
+          "margin": 3.456742584705353,
+          "flags": [
+            "amod/Gender"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-39",
+      "family": "amod",
+      "flag_token": "Vecā",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecais",
+          "family": "amod",
+          "margin": 2.697271764278412,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "sēž",
+          "family": "nsubj",
+          "margin": 3.1218072175979614,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecā",
+          "family": "amod",
+          "margin": 1.5240998268127441,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "sēž",
+          "family": "nsubj",
+          "margin": 3.1125771403312683,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-40",
+      "family": "amod",
+      "flag_token": "baltā",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "apbrīnoja",
+          "family": "nsubj",
+          "margin": 3.0601612329483032,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "balto",
+          "family": "amod",
+          "margin": 3.123379409313202,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "apbrīnoja",
+          "family": "nsubj",
+          "margin": 3.099092185497284,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "baltā",
+          "family": "amod",
+          "margin": 3.3805180191993713,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-41",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Baltā",
+          "family": "amod",
+          "margin": 3.4419052600860596,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "karājas",
+          "family": "nsubj",
+          "margin": 3.240389108657837,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-42",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzīvo",
+          "family": "nsubj",
+          "margin": 3.0847935676574707,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "mazā",
+          "family": "amod",
+          "margin": 2.953509569168091,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-43",
+      "family": "amod",
+      "flag_token": "sarkanās",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "zaļie",
+          "family": "amod",
+          "margin": 3.3755991458892822,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "garšo",
+          "family": "nsubj",
+          "margin": 3.489337921142578,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "zaļie",
+          "family": "amod",
+          "margin": 3.3109130263328552,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "garšo",
+          "family": "nsubj",
+          "margin": 3.50599205493927,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-44",
+      "family": "amod",
+      "flag_token": "jaunais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecā",
+          "family": "amod",
+          "margin": 3.3259227573871613,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "pārdota",
+          "family": "nsubj",
+          "margin": 3.658012866973877,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.5808448791503906,
+          "flags": []
+        },
+        {
+          "token_index": 8,
+          "token": "nav",
+          "family": "nsubj",
+          "margin": 3.458721339702606,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Vecā",
+          "family": "amod",
+          "margin": 3.307547688484192,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "pārdota",
+          "family": "nsubj",
+          "margin": 3.597445547580719,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.6378674507141113,
+          "flags": []
+        },
+        {
+          "token_index": 8,
+          "token": "nav",
+          "family": "nsubj",
+          "margin": 3.15082648396492,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-45",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "bija",
+          "family": "nsubj",
+          "margin": 3.548502564430237,
+          "flags": []
+        },
+        {
+          "token_index": 8,
+          "token": "nopirku",
+          "family": "nsubj",
+          "margin": 3.8256725668907166,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-46",
+      "family": "amod",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 5,
+          "token": "izvēlējās",
+          "family": "nsubj",
+          "margin": 3.359521448612213,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-47",
+      "family": "amod",
+      "flag_token": "Izlasītie",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Izlasītās",
+          "family": "amod",
+          "margin": 2.909290611743927,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.0494507551193237,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Izlasītie",
+          "family": "amod",
+          "margin": 2.9809477627277374,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "stāv",
+          "family": "nsubj",
+          "margin": 3.086989939212799,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-48",
+      "family": "amod",
+      "flag_token": "Smaidīgais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Smaidīgie",
+          "family": "amod",
+          "margin": 3.0809407234191895,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "sveica",
+          "family": "nsubj",
+          "margin": 3.1214563846588135,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Smaidīgais",
+          "family": "amod",
+          "margin": 3.1183049082756042,
+          "flags": [
+            "amod/Number"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "sveica",
+          "family": "nsubj",
+          "margin": 3.2645747661590576,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "A-49",
+      "family": "amod",
+      "flag_token": "Salauztais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Salauzto",
+          "family": "amod",
+          "margin": 3.191763699054718,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Salauztais",
+          "family": "amod",
+          "margin": 2.245620220899582,
+          "flags": [
+            "amod/Case"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "A-50",
+      "family": "amod",
+      "flag_token": "Nopļautais",
+      "good_decisions": [
+        {
+          "token_index": 1,
+          "token": "Nopļauta",
+          "family": "amod",
+          "margin": 2.9871358275413513,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "smaržo",
+          "family": "nsubj",
+          "margin": 3.3488943576812744,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 1,
+          "token": "Nopļautais",
+          "family": "amod",
+          "margin": 3.5416993498802185,
+          "flags": [
+            "amod/Gender"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "smaržo",
+          "family": "nsubj",
+          "margin": 3.409595489501953,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-01",
+      "family": "nsubj",
+      "flag_token": "strādā",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādāju",
+          "family": "nsubj",
+          "margin": 2.7620339393615723,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "strādā",
+          "family": "nsubj",
+          "margin": 2.917887806892395,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-02",
+      "family": "nsubj",
+      "flag_token": "lasa",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "lasi",
+          "family": "nsubj",
+          "margin": 2.934796094894409,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "lasa",
+          "family": "nsubj",
+          "margin": 3.054152190685272,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-03",
+      "family": "nsubj",
+      "flag_token": "dzerat",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzeram",
+          "family": "nsubj",
+          "margin": 2.9889272451400757,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzerat",
+          "family": "nsubj",
+          "margin": 2.978416919708252,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-04",
+      "family": "nsubj",
+      "flag_token": "runājam",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "runājat",
+          "family": "nsubj",
+          "margin": 3.1841877698898315,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "runājam",
+          "family": "nsubj",
+          "margin": 3.1429574489593506,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-05",
+      "family": "nsubj",
+      "flag_token": "bija",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "biju",
+          "family": "nsubj",
+          "margin": 3.1480451822280884,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "bija",
+          "family": "nsubj",
+          "margin": 3.332673192024231,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-06",
+      "family": "nsubj",
+      "flag_token": "strādāju",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "strādāji",
+          "family": "nsubj",
+          "margin": 3.037130355834961,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "strādāju",
+          "family": "nsubj",
+          "margin": 2.9423136711120605,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-07",
+      "family": "nsubj",
+      "flag_token": "brauks",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "brauksim",
+          "family": "nsubj",
+          "margin": 3.172097325325012,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "brauks",
+          "family": "nsubj",
+          "margin": 3.1670820713043213,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-08",
+      "family": "nsubj",
+      "flag_token": "saņemsim",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "saņemsiet",
+          "family": "nsubj",
+          "margin": 3.0990231037139893,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "saņemsim",
+          "family": "nsubj",
+          "margin": 2.9476012587547302,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-09",
+      "family": "nsubj",
+      "flag_token": "dziedam",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dziedu",
+          "family": "nsubj",
+          "margin": 2.8137741088867188,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "dziedam",
+          "family": "nsubj",
+          "margin": 2.9662171602249146,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-10",
+      "family": "nsubj",
+      "flag_token": "braucat",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "brauc",
+          "family": "nsubj",
+          "margin": 3.0036932826042175,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "braucat",
+          "family": "nsubj",
+          "margin": 3.265389561653137,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-11",
+      "family": "nsubj",
+      "flag_token": "ceļoju",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "ceļojam",
+          "family": "nsubj",
+          "margin": 2.9294105172157288,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "ceļoju",
+          "family": "nsubj",
+          "margin": 3.0160040855407715,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-12",
+      "family": "nsubj",
+      "flag_token": "peldi",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "peldat",
+          "family": "nsubj",
+          "margin": 3.066619873046875,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "peldi",
+          "family": "nsubj",
+          "margin": 3.22549307346344,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-13",
+      "family": "nsubj",
+      "flag_token": "mazgājas",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "mazgājos",
+          "family": "nsubj",
+          "margin": 2.943584442138672,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "mazgājas",
+          "family": "nsubj",
+          "margin": 3.068127155303955,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-14",
+      "family": "nsubj",
+      "flag_token": "smejas",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "smejies",
+          "family": "nsubj",
+          "margin": 3.0398064255714417,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "smejas",
+          "family": "nsubj",
+          "margin": 3.1368666887283325,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-15",
+      "family": "nsubj",
+      "flag_token": "tiekaties",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "tiksimies",
+          "family": "nsubj",
+          "margin": 3.0450310707092285,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "tiekaties",
+          "family": "nsubj",
+          "margin": 3.0092281103134155,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-16",
+      "family": "nsubj",
+      "flag_token": "priecājamies",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "priecājos",
+          "family": "nsubj",
+          "margin": 3.034071683883667,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "priecājamies",
+          "family": "nsubj",
+          "margin": 3.07106876373291,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-17",
+      "family": "nsubj",
+      "flag_token": "spēlēju",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlē",
+          "family": "nsubj",
+          "margin": 2.87787663936615,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlēju",
+          "family": "nsubj",
+          "margin": 2.9613834619522095,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-18",
+      "family": "nsubj",
+      "flag_token": "redzi",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "redz",
+          "family": "nsubj",
+          "margin": 3.2189440727233887,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "redzi",
+          "family": "nsubj",
+          "margin": 3.3164246678352356,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-19",
+      "family": "nsubj",
+      "flag_token": "spēlējamies",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 2.9281997680664062,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "spēlējamies",
+          "family": "nsubj",
+          "margin": 2.8024216294288635,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-20",
+      "family": "nsubj",
+      "flag_token": "raksti",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "rakstu",
+          "family": "nsubj",
+          "margin": 2.9613393545150757,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "raksti",
+          "family": "nsubj",
+          "margin": 2.96225905418396,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-21",
+      "family": "nsubj",
+      "flag_token": "zinu",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "zini",
+          "family": "nsubj",
+          "margin": 3.0198433995246887,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "zinu",
+          "family": "nsubj",
+          "margin": 2.980099678039551,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-22",
+      "family": "nsubj",
+      "flag_token": "gājāt",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "gājām",
+          "family": "nsubj",
+          "margin": 3.0433318614959717,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "garu",
+          "family": "amod",
+          "margin": 3.112787127494812,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "gājāt",
+          "family": "nsubj",
+          "margin": 3.144141912460327,
+          "flags": [
+            "nsubj/Person"
+          ]
+        },
+        {
+          "token_index": 3,
+          "token": "garu",
+          "family": "amod",
+          "margin": 3.21002995967865,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-23",
+      "family": "nsubj",
+      "flag_token": "gaidām",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "gaidāt",
+          "family": "nsubj",
+          "margin": 2.9752827882766724,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "gaidām",
+          "family": "nsubj",
+          "margin": 2.9571568965911865,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-24",
+      "family": "nsubj",
+      "flag_token": "iesi",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "iešu",
+          "family": "nsubj",
+          "margin": 3.2490936517715454,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "iesi",
+          "family": "nsubj",
+          "margin": 3.1424912214279175,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-25",
+      "family": "nsubj",
+      "flag_token": "sapratīsiet",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "sapratīsi",
+          "family": "nsubj",
+          "margin": 3.045162558555603,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "sapratīsiet",
+          "family": "nsubj",
+          "margin": 3.1720367670059204,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-26",
+      "family": "nsubj",
+      "flag_token": "atnācām",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "atnācu",
+          "family": "nsubj",
+          "margin": 2.8482617139816284,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "atnācām",
+          "family": "nsubj",
+          "margin": 3.0017915964126587,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-27",
+      "family": "nsubj",
+      "flag_token": "spēlē",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "spēlējam",
+          "family": "nsubj",
+          "margin": 3.3369871377944946,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "spēlē",
+          "family": "nsubj",
+          "margin": 3.6979026794433594,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-28",
+      "family": "nsubj",
+      "flag_token": "dalās",
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "dalāmies",
+          "family": "nsubj",
+          "margin": 3.256840765476227,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 4,
+          "token": "dalās",
+          "family": "nsubj",
+          "margin": 3.3913158178329468,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-29",
+      "family": "nsubj",
+      "flag_token": "aizbraucis",
+      "good_decisions": [
+        {
+          "token_index": 5,
+          "token": "aizbraukuši",
+          "family": "nsubj",
+          "margin": 3.4267438650131226,
+          "flags": []
+        },
+        {
+          "token_index": 4,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.4573599100112915,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 5,
+          "token": "aizbraucis",
+          "family": "nsubj",
+          "margin": 3.4727827310562134,
+          "flags": [
+            "nsubj/Number"
+          ]
+        },
+        {
+          "token_index": 4,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.4734742641448975,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-30",
+      "family": "nsubj",
+      "flag_token": "palikusi",
+      "good_decisions": [
+        {
+          "token_index": 6,
+          "token": "palikušas",
+          "family": "nsubj",
+          "margin": 3.6362210512161255,
+          "flags": []
+        },
+        {
+          "token_index": 5,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.6809180974960327,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 6,
+          "token": "palikusi",
+          "family": "nsubj",
+          "margin": 3.672894835472107,
+          "flags": [
+            "nsubj/Number"
+          ]
+        },
+        {
+          "token_index": 5,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.675279438495636,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-31",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "gaida",
+          "family": "nsubj",
+          "margin": 3.06670480966568,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-32",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "atrodas",
+          "family": "nsubj",
+          "margin": 3.0078747272491455,
+          "flags": []
+        },
+        {
+          "token_index": 3,
+          "token": "pirmajā",
+          "family": "amod",
+          "margin": 3.2804341316223145,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-33",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "darbojas",
+          "family": "nsubj",
+          "margin": 3.0535972118377686,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-34",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "pilns",
+          "family": "nsubj",
+          "margin": 3.1563369035720825,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-35",
+      "family": "nsubj",
+      "flag_token": "strādā",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "strādājam",
+          "family": "nsubj",
+          "margin": 3.0175849199295044,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "strādā",
+          "family": "nsubj",
+          "margin": 3.3928183913230896,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-36",
+      "family": "nsubj",
+      "flag_token": "dzīvo",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "dzīvojam",
+          "family": "nsubj",
+          "margin": 2.5651455521583557,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "dzīvo",
+          "family": "nsubj",
+          "margin": 2.4917394518852234,
+          "flags": [
+            "nsubj/Person"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-37",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "spēlējas",
+          "family": "nsubj",
+          "margin": 3.1786478757858276,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-38",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "dzīvo",
+          "family": "nsubj",
+          "margin": 3.041634678840637,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-39",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "guļ",
+          "family": "nsubj",
+          "margin": 2.8116161227226257,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-40",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "ieradās",
+          "family": "nsubj",
+          "margin": 2.945096254348755,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-41",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "pienāks",
+          "family": "nsubj",
+          "margin": 2.8218659162521362,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-42",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "dzied",
+          "family": "nsubj",
+          "margin": 2.8402552008628845,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-43",
+      "family": "nsubj",
+      "flag_token": "atnācis",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "atnākuši",
+          "family": "nsubj",
+          "margin": 3.0454987287521362,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "esam",
+          "family": "nsubj",
+          "margin": 3.046267032623291,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "atnācis",
+          "family": "nsubj",
+          "margin": 3.130900263786316,
+          "flags": [
+            "nsubj/Number"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "esam",
+          "family": "nsubj",
+          "margin": 3.057767152786255,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-44",
+      "family": "nsubj",
+      "flag_token": "esat",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "nopelnījis",
+          "family": "nsubj",
+          "margin": 3.0756278038024902,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "esi",
+          "family": "nsubj",
+          "margin": 3.058630585670471,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "nopelnījis",
+          "family": "nsubj",
+          "margin": 3.2617595195770264,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "esat",
+          "family": "nsubj",
+          "margin": 3.1850088834762573,
+          "flags": [
+            "nsubj/Number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N-45",
+      "family": "nsubj",
+      "flag_token": "aizmirsuši",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "aizmirsis",
+          "family": "nsubj",
+          "margin": 3.0218942165374756,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "biju",
+          "family": "nsubj",
+          "margin": 3.0926142930984497,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "aizmirsuši",
+          "family": "nsubj",
+          "margin": 3.1366647481918335,
+          "flags": [
+            "nsubj/Number"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "biju",
+          "family": "nsubj",
+          "margin": 3.1003479957580566,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-46",
+      "family": "nsubj",
+      "flag_token": "atgriezusies",
+      "good_decisions": [
+        {
+          "token_index": 3,
+          "token": "atgriezušās",
+          "family": "nsubj",
+          "margin": 3.2180622220039368,
+          "flags": []
+        },
+        {
+          "token_index": 2,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.41108775138855,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 3,
+          "token": "atgriezusies",
+          "family": "nsubj",
+          "margin": 2.9008560180664062,
+          "flags": [
+            "nsubj/Number"
+          ]
+        },
+        {
+          "token_index": 2,
+          "token": "ir",
+          "family": "nsubj",
+          "margin": 3.2337459921836853,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-47",
+      "family": "nsubj",
+      "flag_token": "apsēdās",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "atnācu",
+          "family": "nsubj",
+          "margin": 3.463797450065613,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "atnācu",
+          "family": "nsubj",
+          "margin": 3.5198821425437927,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-48",
+      "family": "nsubj",
+      "flag_token": "ielaida",
+      "good_decisions": [
+        {
+          "token_index": 2,
+          "token": "atvēri",
+          "family": "nsubj",
+          "margin": 3.435521125793457,
+          "flags": []
+        },
+        {
+          "token_index": 6,
+          "token": "svaigu",
+          "family": "amod",
+          "margin": 3.2276812195777893,
+          "flags": []
+        }
+      ],
+      "bad_decisions": [
+        {
+          "token_index": 2,
+          "token": "atvēri",
+          "family": "nsubj",
+          "margin": 3.457570731639862,
+          "flags": []
+        },
+        {
+          "token_index": 6,
+          "token": "svaigu",
+          "family": "amod",
+          "margin": 3.1529467403888702,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-49",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": [
+        {
+          "token_index": 4,
+          "token": "vēlam",
+          "family": "amod",
+          "margin": 3.207159101963043,
+          "flags": []
+        }
+      ]
+    },
+    {
+      "id": "N-50",
+      "family": "nsubj",
+      "flag_token": null,
+      "good_decisions": []
+    }
+  ]
+}
