@@ -1,0 +1,19 @@
+{
+  "name": "johnicorn-skills",
+  "description": "Johnicorn's Claude Code skills — Latvian-first, data-viz-first, built in real client work",
+  "version": "1.0.0",
+  "owner": { "name": "Jānis Patmalnieks" },
+  "plugins": [
+    {
+      "name": "lv-antislop",
+      "displayName": "LV Antislop",
+      "source": "./plugins/lv-antislop",
+      "description": "Universal Latvian de-slop filter: publicistika-register prompt skill + deterministic B1/B2/B3 gate (spelling, form-existence, style manifest)",
+      "version": "2.0.0",
+      "author": { "name": "Jānis Patmalnieks" },
+      "license": "MIT",
+      "keywords": ["latvian", "latviešu", "nlp", "writing", "de-slop", "style"],
+      "category": "writing"
+    }
+  ]
+}

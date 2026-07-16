@@ -1,0 +1,139 @@
+# B3 fixtures — positive (must catch) / negative (must NOT catch) per rule_id
+# pairs with contracts/b3-style-manifest.v1.yaml v1.1.0
+# used by §7 Phase-1b acceptance: every issue rule must catch its positive and
+# leave its negative untouched; diagnostics report without failing.
+
+fixtures:
+  filler.ir_svarigi_atzimet:
+    positive: ["Ir svarīgi atzīmēt, ka pārdošana krita."]
+    negative: ["Pārdošana krita."]
+  filler.ir_verts_piebilst:
+    positive: ["Ir vērts piebilst, ka pārdošana auga."]
+    negative: ["Pārdošana auga."]
+  filler.kopuma_var_secinat:
+    positive: ["Kopumā var secināt, ka tests izdevās."]
+    negative: ["Tests izdevās."]
+  filler.nosleguma_jaatzime:
+    positive: ["Noslēgumā jāatzīmē, ka darbs pabeigts."]
+    negative: ["Darbs pabeigts."]
+  filler.jauzsver:
+    positive: ["Jāuzsver, ka termiņš ir piektdien."]
+    negative: ["Termiņš ir piektdien."]
+  transition.turklat:
+    positive: ["Serveris krita. Turklāt dati pazuda."]
+    negative: ["Serveris krita. Dati pazuda."]
+  transition.tadejadi:
+    positive: ["Serveris apstājās. Tādējādi dati nebija pieejami."]
+    negative: ["Serveris apstājās, tāpēc dati nebija pieejami."]
+  transition.lidz_ar_to:
+    positive: ["Serveris apstājās. Līdz ar to dati nebija pieejami."]
+    negative: ["Serveris apstājās, tāpēc dati nebija pieejami."]
+  transition.tai_skaita:
+    positive: ["Komandā ir četri cilvēki, tai skaitā divi dizaineri."]
+    negative: ["Komandā ir četri cilvēki: divi no viņiem ir dizaineri."]
+  transition.neatkarigi_no_ta:
+    positive: ["Neatkarīgi no tā, vai līst, veikals strādā."]
+    negative: ["Veikals strādā arī lietū."]
+  transition.ka_ari:            # diagnostic — reports, does not fail
+    positive: ["Pārdodam alu, kā arī sidru."]
+    negative: ["Pārdodam alu un sidru."]
+  calque.aizrautigi_par:
+    positive: ["Mēs esam aizrautīgi par kafiju."]
+    negative: ["Mums rūp kafija."]
+  calque.musdienu_dinamiskaja:
+    positive: ["Mūsdienu dinamiskajā vidē mēs augam."]
+    negative: ["Šobrīd mēs augam."]
+  calque.atsledziet_potencialu:
+    positive: ["Atslēdziet savu potenciālu jau šodien."]
+    negative: ["Izmantojiet savas prasmes darbā."]
+  calque.bezsuvju:
+    positive: ["Bezšuvju pieredze lietotājam."]
+    negative: ["Ērta lietošana."]
+  calque.speli_mainosi:
+    positive: ["Tas ir spēli mainošs risinājums."]
+    negative: ["Tas samazina apstrādes laiku uz pusi."]
+  calque.iedzilinasimies:
+    positive: ["Iedziļināsimies datos."]
+    negative: ["Paskatīsimies datus."]
+  cliche.uzticams_partneris:
+    positive: ["Mēs esam uzticams partneris."]
+    negative: ["Mēs piegādājam 48 stundās."]
+  cliche.individuala_pieeja:
+    positive: ["Individuāla pieeja katram klientam."]
+    negative: ["Katram projektam savs vadītājs."]
+  cliche.profesionala_komanda:
+    positive: ["Mums ir profesionāla komanda ar ilggadēju pieredzi."]
+    negative: ["Komandā strādā četri sertificēti inženieri."]
+  cliche.augstakas_kvalitates:
+    positive: ["Piedāvājam augstākās kvalitātes kafiju."]
+    negative: ["Kafija saņēma 86 punktus vērtējumā."]
+  cliche.visaptveross_risinajums:
+    positive: ["Piedāvājam visaptverošs risinājums klientiem."]
+    negative: ["Būvējam CRM medicīnas tirgotājiem."]
+  cliche.no_idejas_lidz_rezultatam:
+    positive: ["Pavadām projektu no idejas līdz rezultātam."]
+    negative: ["Izpētām vajadzību, izstrādājam prototipu un palaižam produktu."]
+  cliche.sazinieties_jau_sodien:
+    positive: ["Sazinieties ar mums jau šodien!"]
+    negative: ["Raksti uz info@x.lv."]
+  cliche.pilna_spektra:
+    positive: ["Mūsu piedāvājums: pilna spektra pakalpojumi."]
+    negative: ["Projektējam, programmējam un uzturam sistēmas."]
+  cliche.sasniegt_jusu_merkus:
+    positive: ["Palīdzam sasniegt jūsu mērķus."]
+    negative: ["Palīdzam palielināt pārdošanu par 12%."]
+  cliche.superlativ_generic:
+    positive: ["Izcila kvalitāte un unikāls garšas baudījums."]
+    negative: ["Miežu iesals, 4.8% ABV."]
+  rucalque.pienemt_merus:
+    positive: ["Vadība nolēma pieņemt mērus."]
+    negative: ["Vadība nolēma rīkoties."]
+  rucalque.pacelt_jautajumu:
+    positive: ["Vadība nolēma pacelt jautājumu."]
+    negative: ["Vadība nolēma izvirzīt jautājumu."]
+  rucalque.piegriezt_uzmanibu:
+    positive: ["Lūdzam piegriezt uzmanību termiņam."]
+    negative: ["Lūdzam ievērot termiņu."]
+  rucalque.gadus_atpakal:
+    positive: ["Tas notika 5 gadus atpakaļ."]
+    negative: ["Tas notika pirms 5 gadiem."]              # must NOT catch (was the old bug)
+  nouninfl.veikt_analizi:
+    positive: ["Mums jāsāk veikt analīzi."]
+    negative: ["Mums jāanalizē dati."]
+  nouninfl.sniegt_atbalstu:
+    positive: ["Komanda var sniegt atbalstu klientiem."]
+    negative: ["Komanda palīdz klientiem."]
+  nouninfl.veikt_realizaciju:
+    positive: ["Plānots veikt realizāciju augustā."]
+    negative: ["Projektu īstenosim augustā."]
+  nouninfl.veikt_izmainas:
+    positive: ["Nepieciešams veikt izmaiņas līgumā."]
+    negative: ["Līgums jāmaina."]
+  nouninfl.nodrosinat_pieejamibu:
+    positive: ["Mums jāspēj nodrošināt pieejamību visu diennakti."]
+    negative: ["Pakalpojums būs pieejams visu diennakti."]
+  nouninfl.veikt_parbaudi:
+    positive: ["Inspektors ieradās veikt pārbaudi."]
+    negative: ["Inspektors ieradās pārbaudīt telpas."]
+  nouninfl.sniegt_informaciju:
+    positive: ["Lūdzu sniegt informāciju par izmaksām."]
+    negative: ["Lūdzu norādiet izmaksas."]
+  nouninfl.veikt_pasakumus:
+    positive: ["Nolēmām veikt pasākumus."]
+    negative: ["Nolēmām rīkoties."]
+  overused.verbs:               # diagnostic
+    positive: ["Mums jāspēj nodrošināt atbalstu."]
+    negative: ["Mēs atbalstām."]
+  overused.adjectives:          # diagnostic
+    positive: ["Inovatīvs un efektīvs process."]
+    negative: ["Process, kas taupa 3 stundas nedēļā."]
+  tiek.density:                 # diagnostic — reports count only
+    positive: ["Atbalsts tiek nodrošināts. Pakalpojums tiek piedāvāts."]  # per_1000 reported
+    negative: ["Mēs atbalstām. Mēs piedāvājam pakalpojumu."]
+  struct.mes_repetition:        # diagnostic
+    positive: ["Mēs būvējam. Mēs rakstām. Mēs pārdodam."]
+    negative: ["Būvējam sistēmas. Klienti tās lieto katru dienu."]
+
+# positives use the manifest's literal/word forms verbatim; inflected matching is out of scope for v1.1
+notes:
+  - "Negative fixtures are the publicistika rewrite of each positive — they double as anti-slop examples."

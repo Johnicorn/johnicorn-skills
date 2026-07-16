@@ -1,0 +1,5 @@
+# PENDING HUMAN CLASSIFICATION — not loaded by the gate.
+# Purpose: non-ASCII pilot findings awaiting human review; new pilot runs append here.
+# 2026-07-16 coding.patmalnieks.lv batch (39 tokens): CLASSIFIED by Jānis's head-review
+#   -> anglicisms into lv-it-supplement.txt, real-LV Tēzaurs gaps into tezaurs-gaps.txt.
+# (currently empty)

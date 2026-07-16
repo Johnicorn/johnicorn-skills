@@ -1,0 +1,9 @@
+{
+  "name": "lv-antislop",
+  "displayName": "LV Antislop",
+  "version": "2.0.0",
+  "description": "Universal Latvian de-slop filter with a deterministic morphology/style gate",
+  "author": { "name": "Jānis Patmalnieks" },
+  "license": "MIT",
+  "skills": "./skills/"
+}

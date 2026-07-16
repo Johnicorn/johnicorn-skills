@@ -1,0 +1,29 @@
+# Purpose: Latvian words absent from Tēzaurs ispell; upstream feedback seed.
+# Provenance: 2026-07-16 coding.patmalnieks.lv pilot.
+# License: MIT.
+apakšmapes
+atjauninājumu
+ekosistēmā
+failsistēma
+failsistēmu
+ielasītājs
+iestatījumos
+iestatījums
+inicializēt
+kešatmiņa
+knifīgai
+knifīgas
+knifīgiem
+kompilējas
+kontrolkartīte
+noauditēji
+noauditēt
+paredzētājs
+pašaudita
+pašaudits
+pieslēgvieta
+pieslēgvietu
+priekšskatījums
+sākumlapa
+sākumlapu
+traucējummeklēšana

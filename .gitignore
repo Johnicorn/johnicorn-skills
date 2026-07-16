@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# built indexes + raw CLARIN downloads, CC BY-SA data — built locally by tools/build_from_clarin.py, or fetched from GitHub Release assets; NEVER in git
+plugins/lv-antislop/vendor/
+.pytest_cache/

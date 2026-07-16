@@ -1,0 +1,292 @@
+# B3 style-rule manifest — lv-antislop v2, Phase 1b
+# version: 1.1.0   (hash computed on commit; see contracts/README)
+# source: pinned vendor/lv-antislop-v1/references/{banned-phrases.md,kancelejismi.md}
+# scope: universal (voice-neutral). NO voice-specific rules here.
+#
+# MATCHING SEMANTICS (apply to every rule unless overridden):
+#   normalization: input is NFC-normalized before matching; offsets are into the NFC text
+#   case: case-insensitive for phrase/word rules (Latvian diacritics preserved)
+#   boundaries: Unicode word boundaries; letter class includes āčēģīķļņōŗšūž (upper/lower)
+#   overlap: on overlapping matches, longest match wins; ties -> lowest rule_id
+#   excluded_ranges: caller MAY pass char-offset ranges (quotes, code, headings,
+#       mixed-language) to exclude. URLs/emails are auto-excluded via regex.
+#       Plain text cannot reliably detect headings/quotes/mixed-language -> if the
+#       caller supplies none, matches there are NOT suppressed (documented limitation).
+#   severity: issue = counts toward has_issues (GateResult); diagnostic = report only
+#
+# SEVERITY POLICY (honest, per round-3 audit):
+#   - fixed slop phrases (calques, filler intros, clichés) => issue (reliable)
+#   - single overused verbs/adjectives => diagnostic (context-legitimate sometimes)
+#   - tiek density => diagnostic ONLY until calibrated (task B3-CAL-1); no shipped threshold
+#   - structural heuristics => diagnostic
+
+meta:
+  version: 1.1.0
+  digest_sha256: "edc50f19082f2c3b0d020f0bd5af6d76273d8a2197d4d3619826e446fcf7d36f"        # sha256 of canonical (meta.version + schema + rules)
+  source: pinned vendor/lv-antislop-v1/references/{banned-phrases.md,kancelejismi.md}
+  fixtures: contracts/b3-fixtures.v1.yaml     # per-rule positive/negative fixtures (§7 1b)
+
+schema:
+  regex_dialect: "Python re with re.UNICODE; \\b word-boundary; letter class incl. āčēģīķļņōŗšūž (both cases)"
+  offset_unit: "Unicode code points into NFC-normalized text; end-exclusive [start,end)"
+  url_exclusion:   'https?://\S+|www\.\S+'
+  email_exclusion: '[\w.+-]+@[\w-]+\.[\w.-]+'
+  body_definition: "caller text minus excluded_ranges; caller MAY mark heading/quote/code/mixed-language
+    ranges (char offsets) to exclude; URLs/emails auto-excluded via the regexes above; unmarked -> scanned"
+  sentence_segmentation: "struct.* rules split on [.!?…] + whitespace + uppercase; 'sentence-initial'
+    = first alphabetic token after a boundary or text start"
+  density_report_schema: "{rule_id, count, denominator_word_tokens, per_1000: float, severity}"
+  denominator_scope: "numerator and denominator computed on the SAME token set = body minus excluded_ranges"
+  severity_values: [issue, diagnostic]
+  rule_fields: [id, kind, severity, "one_of(pattern_literal|pattern_word|pattern_regex|density-fields)",
+                "example?", "counterexample?", "replacement_hint?", "note?"]
+
+rules:
+
+  # ---- 1. Filler intros (reliable slop) ----
+  - id: filler.ir_svarigi_atzimet
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["ir svarīgi atzīmēt, ka", "ir svarīgi atzīmēt ka"]
+    example: ["Ir svarīgi atzīmēt, ka dati aug."]
+    counterexample: ["Dati aug."]
+  - id: filler.ir_verts_piebilst
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["ir vērts piebilst, ka", "ir vērts piebilst ka"]
+  - id: filler.kopuma_var_secinat
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["kopumā var secināt, ka", "kopumā var secināt ka"]
+  - id: filler.nosleguma_jaatzime
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["noslēgumā jāatzīmē, ka", "noslēgumā jāatzīmē ka"]
+  - id: filler.jauzsver
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["jāuzsver, ka", "jāuzsver ka"]
+
+  # ---- 2. Bureaucratic transitions ----
+  - id: transition.turklat
+    kind: transition
+    severity: issue
+    pattern_word: ["turklāt"]
+  - id: transition.tadejadi
+    kind: transition
+    severity: issue
+    pattern_word: ["tādējādi"]
+  - id: transition.lidz_ar_to
+    kind: transition
+    severity: issue
+    pattern_literal: ["līdz ar to"]
+  - id: transition.ka_ari
+    kind: transition
+    severity: diagnostic   # "kā arī" = "as well as"; often legitimate — demoted (precision-first)
+    pattern_literal: ["kā arī"]
+  - id: transition.tai_skaita
+    kind: transition
+    severity: issue
+    pattern_literal: ["tai skaitā"]
+  - id: transition.neatkarigi_no_ta
+    kind: transition
+    severity: issue
+    pattern_literal: ["neatkarīgi no tā vai", "neatkarīgi no tā, vai"]
+  - id: transition.savukart
+    kind: transition
+    severity: diagnostic   # legit as contrast; only formal-transition use is slop — regex can't tell
+    pattern_word: ["savukārt"]
+
+  # ---- 3. English calque tells (reliable) ----
+  - id: calque.aizrautigi_par
+    kind: calque
+    severity: issue
+    pattern_literal: ["esam aizrautīgi par", "aizrautīgi par"]
+    replacement_hint: "mums rūp…"
+  - id: calque.musdienu_dinamiskaja
+    kind: calque
+    severity: issue
+    pattern_literal: ["mūsdienu dinamiskajā vidē", "mūsdienu dinamiskajā pasaulē"]
+  - id: calque.atsledziet_potencialu
+    kind: calque
+    severity: issue
+    pattern_literal: ["atslēdziet savu potenciālu", "atslēdziet potenciālu"]
+  - id: calque.bezsuvju
+    kind: calque
+    severity: issue
+    pattern_word: ["bezšuvju"]
+  - id: calque.speli_mainosi
+    kind: calque
+    severity: issue
+    pattern_literal: ["spēli mainoši", "spēli mainošs"]
+  - id: calque.iedzilinasimies
+    kind: calque
+    severity: issue
+    pattern_word: ["iedziļināsimies"]
+  - id: calque.gobelens
+    kind: calque
+    severity: diagnostic   # legitimate literal meaning exists
+    pattern_word: ["gobelēns", "gobelēnu"]
+  - id: calque.valstiba_realm
+    kind: calque
+    severity: diagnostic
+    pattern_word: ["valstība"]   # only the realm-calque sense is slop
+  - id: calque.robusta
+    kind: calque
+    severity: diagnostic
+    pattern_word: ["robusts", "robusta"]
+
+  # ---- 4. LV corporate clichés (reliable) ----
+  - id: cliche.uzticams_partneris
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["uzticams partneris"]
+  - id: cliche.individuala_pieeja
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["individuāla pieeja katram klientam", "individuāla pieeja"]
+  - id: cliche.profesionala_komanda
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["profesionāla komanda ar ilggadēju pieredzi"]
+  - id: cliche.augstakas_kvalitates
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["augstākās kvalitātes", "nodrošinām augstākās kvalitātes"]
+  - id: cliche.visaptveross_risinajums
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["visaptverošs risinājums", "visaptverošus risinājumus"]
+  - id: cliche.no_idejas_lidz_rezultatam
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["no idejas līdz rezultātam", "no a līdz z"]
+  - id: cliche.sazinieties_jau_sodien
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["sazinieties ar mums jau šodien"]
+  - id: cliche.pilna_spektra
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["pilna spektra pakalpojumi", "pilna spektra"]
+  - id: cliche.sasniegt_jusu_merkus
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["palīdzam sasniegt jūsu mērķus", "sasniegt jūsu mērķus"]
+  - id: cliche.superlativ_generic
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["izcila kvalitāte", "unikāls garšas baudījums", "īstiem gardēžiem"]
+
+  # ---- 5. Russian calques ----
+  - id: rucalque.pienemt_merus
+    kind: calque
+    severity: issue
+    pattern_literal: ["pieņemt mērus"]
+    replacement_hint: "rīkoties"   # fixed: "veikt pasākumus" is itself flagged by nouninfl.veikt_pasakumus
+  - id: rucalque.pacelt_jautajumu
+    kind: calque
+    severity: issue
+    pattern_literal: ["pacelt jautājumu"]
+    replacement_hint: "izvirzīt jautājumu"
+  - id: rucalque.piegriezt_uzmanibu
+    kind: calque
+    severity: issue
+    pattern_literal: ["piegriezt uzmanību"]
+    replacement_hint: "pievērst uzmanību"
+  - id: rucalque.gadus_atpakal
+    kind: calque
+    severity: issue
+    pattern_regex: '\b\d+\s+gadus\s+atpakaļ'   # fixed: old first branch matched CORRECT "pirms 3 gadiem"
+    replacement_hint: "pirms X gadiem"
+
+  # ---- 6. Noun+verb substantive inflation (reliable, suggestible) ----
+  - id: nouninfl.veikt_analizi
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["veikt analīzi"]
+    replacement_hint: "analizēt"
+  - id: nouninfl.sniegt_atbalstu
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["sniegt atbalstu"]
+    replacement_hint: "atbalstīt"
+  - id: nouninfl.veikt_realizaciju
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["veikt realizāciju"]
+    replacement_hint: "realizēt"
+  - id: nouninfl.veikt_izmainas
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["veikt izmaiņas"]
+    replacement_hint: "mainīt"
+  - id: nouninfl.nodrosinat_pieejamibu
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["nodrošināt pieejamību"]
+    replacement_hint: "dot pieeju / padarīt pieejamu"
+  - id: nouninfl.veikt_parbaudi
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["veikt pārbaudi"]
+    replacement_hint: "pārbaudīt"
+  - id: nouninfl.sniegt_informaciju
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["sniegt informāciju"]
+    replacement_hint: "informēt"
+  - id: nouninfl.veikt_pasakumus
+    kind: banned_phrase
+    severity: issue
+    pattern_literal: ["veikt pasākumus"]
+    replacement_hint: "rīkoties"
+
+  # ---- 7. AI-overused verbs (diagnostic — context can be legitimate) ----
+  - id: overused.verbs
+    kind: banned_phrase
+    severity: diagnostic
+    pattern_word: ["nodrošināt","veicināt","piedāvāt","sniegt","ļaut","īstenot",
+                   "optimizēt","pielāgot","uzlabot","sasniegt"]
+    note: "flag for review; replace with a concrete verb when possible"
+
+  # ---- 8. AI-overused adjectives (diagnostic) ----
+  - id: overused.adjectives
+    kind: banned_phrase
+    severity: diagnostic
+    pattern_word: ["būtisks","visaptverošs","inovatīvs","efektīvs","kvalitatīvs",
+                   "uzticams","profesionāls","daudzpusīgs"]
+
+  # ---- 9. tiek density (diagnostic until calibrated — NO shipped threshold) ----
+  - id: tiek.density
+    kind: density
+    severity: diagnostic
+    count_token: "tiek"          # whole word, case-insensitive, outside excluded_ranges
+    denominator: word_tokens     # tokenizer: maximal runs of the letter class above
+    reports: {tiek_count, denominator_word_tokens, per_1000}
+    promotion_to_issue: "DEFERRED to calibration task B3-CAL-1 (native vs bureaucratic
+        corpora). No numeric threshold ships until precision/FP are measured."
+
+  # ---- 10. Structural heuristics (diagnostic) ----
+  - id: struct.mes_repetition
+    kind: density
+    severity: diagnostic
+    count_token: "Mēs"
+    denominator: sentences
+    detect: "3+ consecutive sentence-initial 'Mēs'"
+  - id: struct.exclamation_marketing
+    kind: density
+    severity: diagnostic
+    count_token: "!"
+    denominator: body_chars
+    detect: "count of '!' in body"
+  - id: struct.superlatives
+    kind: banned_phrase
+    severity: diagnostic
+    pattern_word: ["vislabākais","unikāls","neatkārtojams","brīnišķīgs","izcils"]
+
+# Notes:
+# - This manifest is FROZEN for Phase 1b at version 1.1.0. Changes bump the version.
+# - Phase 1b B3 scanner supports ONLY: pattern_literal, pattern_word, pattern_regex,
+#   and the three density-kind rules (tiek.density + two struct heuristics). No lemma/inflection.
+# - Every 'issue' rule's example MUST be caught and counterexample MUST NOT be, per §7 1b tests.

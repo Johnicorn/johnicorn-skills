@@ -1,0 +1,19 @@
+{
+  "meta": {"release": "fixture-v1", "file": "lex-index.fixture.json", "sha256": "fixture"},
+  "entries": {
+    "labs": {
+      "lemmas": [{"lemma": "labs", "sense_id": "labs.1", "gloss": "kvalitatīvs, derīgs"}],
+      "synonyms": [
+        {"surface": "kvalitatīvs", "lemma": "kvalitatīvs", "source": "tezaurs"},
+        {"surface": "izcils", "lemma": "izcils", "source": "wordnet"}
+      ]
+    },
+    "ātrs": {
+      "lemmas": [{"lemma": "ātrs", "sense_id": "ātrs.1", "gloss": "kas notiek īsā laikā"}],
+      "synonyms": [
+        {"surface": "straujš", "lemma": "straujš", "source": "tezaurs"},
+        {"surface": "žigls", "lemma": "žigls", "source": "tezaurs"}
+      ]
+    }
+  }
+}

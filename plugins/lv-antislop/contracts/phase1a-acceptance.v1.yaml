@@ -1,0 +1,66 @@
+# Phase 1a acceptance oracle — lv-antislop v2
+# version: 1.0.0  (frozen; drift -> NEW version, never re-baseline in place)
+# Referenced by spec §7 (1a). Makes the 1a PASS decision reproducible.
+
+model:
+  model_id: "PINNED_AT_BUILD"      # exact model + revision recorded at run (provenance)
+  temperature: 0.7
+  top_p: 0.9
+  seed: 42                          # where the provider supports it; else K runs average
+  K_runs: 5                         # invariants must hold across all K
+  retries: excluded                 # a retried generation does not count toward K
+  drift: "on model/revision change, create phase1a-acceptance.vN+1; keep old for comparison"
+
+# RED fixtures: kancelejas / AI-slop briefs the generator must de-slop.
+fixtures:
+  - id: FX-01
+    intent: "Rewrite this ChatGPT LV marketing paragraph in publicistika register."
+    context: "Mēs esam uzticams partneris, kas nodrošina visaptverošus risinājumus..."
+    profile: style_only
+    requirements:
+      - {kind: register, value: "Tu"}
+  - id: FX-02
+    intent: "Translate this EN landing section to natural LV (no calques)."
+    context: "In today's dynamic environment we empower businesses with seamless solutions."
+    profile: style_only
+    requirements:
+      - {kind: register, value: "Tu"}
+  - id: FX-03
+    intent: "Write a short LV social caption for a corporate SaaS brand."
+    context: "SaaS invoicing tool for freelancers; saves time on monthly billing."
+    profile: style_only
+    requirements:
+      - {kind: register, value: "Tu"}
+
+# Hard invariants (checked by the frozen B3 conformance checker + the rules below).
+invariants:
+  b3_issue_hits: 0                  # zero severity=issue manifest matches in output
+  tiek_density: "reported (diagnostic); not a hard fail in 1a"
+
+# Morphology-FREE Tu/Jūs proxy (conservative — may miss, must not false-positive on Tu text).
+# If brief.address == Tu and output contains any of these -> FAIL (register violation).
+tu_violation_proxy:
+  jus_pronouns: ["jūs", "jums", "jūsu", "jūsos", "jūsim", "jūsuprāt"]
+  # small closed set of common 2nd-person-plural verb forms (NOT full morphology):
+  jus_verb_forms: ["esat", "esiet", "varat", "variet", "gribat", "gribiet",
+                   "sazinieties", "uzziniet", "izmantojiet", "atcerieties", "ņemiet"]
+  note: "closed list; a real 2pl detector needs Phase-2 morphology. This proxy is deliberately
+         conservative and is the ONLY 1a register oracle until then."
+
+# Persona-marker neutrality: v2 WITHOUT a voice skill must not carry a specific persona.
+# For the neutral-core test, output must contain NONE of these (bralis-voice signature sample):
+persona_markers:
+  - "brālis"          # brand token
+  - "otrais raunds"
+  - "ležaks"
+  - "svētīgā piezemēšanās"
+persona_markers_note: "per-voice list; extend when adding a reference voice; empty => no persona check"
+
+# Dryness (diagnostic, not pass/fail): reviewer rubric 1-5 on anchored vs unanchored output.
+dryness:
+  method: "reviewer rubric 1-5 (1=dead/kancelejas, 5=alive/publicistika)"
+  compare: "anchored (3-5 anchors) vs unanchored, same brief, K runs each"
+  report: "distribution + median delta; DIAGNOSTIC only"
+
+pass_criteria: "for every fixture, across K runs: invariants.b3_issue_hits == 0 AND no tu_violation_proxy
+                match AND no persona_markers match. Dryness is reported, not gated."
