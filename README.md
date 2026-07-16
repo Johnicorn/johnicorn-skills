@@ -1,6 +1,6 @@
 # Johnicorn Skills
 
-Jāņa Claude Code skilu katalogs. A small catalog of Claude Code skills from Johnicorn.
+Johnicorn Agentic Skill katalogs.
 
 Pirmais skils ir `lv-antislop`, latviešu valodas stila un vārdu formu pārbaudei.
 
