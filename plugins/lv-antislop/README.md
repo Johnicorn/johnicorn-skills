@@ -31,10 +31,11 @@ Requirements: Python >=3.11, then `pip install pyyaml pytest`.
 - B1 pareizrakstības kandidātu pārbaudi.
 - B2 vārdu formu esības pārbaudi.
 - B3 stila manifesta pārbaudi.
+- 2b locījumu saskaņas pārbaudi (`pilot.py --agreement`) — neobligāta, ar AiLab lvnlp parseri.
 
 ## Godīgā robeža
 
-v2 vārti pārbauda pareizrakstības kandidātus, vārdu formu esību un stila manifestu. Locījumu saskaņa (2b) nav iekļauta — tā stāv ceļa kartē aiz saviem kvalitātes vārtiem un neienāks, kamēr tos neizies. Vārdnīcas strādā ar precīzām formām (bez celmošanas): ja vārds ir sarakstā nominatīvā, tā locījumi vēl var uzpeldēt kā diagnostika. LV-IT vārdnīcas ir kurētas ar roku. Projekta vārdnīcai pievieno savu failu ar `--allow` — viens vārds rindā, `#` komentāri.
+v2 vārti pārbauda pareizrakstības kandidātus, vārdu formu esību, stila manifestu un — ar `--agreement` — locījumu saskaņu (amod/nsubj). Saskaņas pārbaude savus kvalitātes vārtus izgāja 2026. gada 16. jūlijā uz 110 dzimtās valodas runātāja validētiem minimālajiem pāriem: precizitāte 0.986 (Vilsona apakšējā robeža 0.926), pārklājums 0.818. Robeža, ko zināt: parsers daļu kļūdu kontekstuāli normalizē, tāpēc tā ķer lielāko daļu locījumu kļūdu, ne visas. Šis režīms prasa atsevišķu vidi: `pip install lvnlp` (torch CPU; pirmā palaišana lejupielādē ~0.6 GB modeli), Windows vidē `PYTHONUTF8=1`; ātrums ap 0.3 s uz teikumu. Vārdnīcas strādā ar precīzām formām (bez celmošanas): ja vārds ir sarakstā nominatīvā, tā locījumi vēl var uzpeldēt kā diagnostika. LV-IT vārdnīcas ir kurētas ar roku. Projekta vārdnīcai pievieno savu failu ar `--allow` — viens vārds rindā, `#` komentāri.
 
 ## Datu stāsts
 
@@ -48,4 +49,4 @@ Ja instalē caur marketplace: būvē indeksus ĀRPUS spraudņa mapes, piemēram 
 cd tools && python -m pytest tests -q
 ```
 
-Komplektā ir 220 testi.
+Komplektā ir 233 testi. Saskaņas pārbaudes likumu dzinēja testi iet bez lvnlp — smagā vide vajadzīga tikai pašam `--agreement` režīmam.

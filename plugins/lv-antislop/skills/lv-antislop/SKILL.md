@@ -71,7 +71,8 @@ Vārti dzīvo `tools/` blakus šim skilam (plugin-instalācijā: `${CLAUDE_PLUGI
 - **Teksta/lapas pārbaude:** `python tools/pilot.py --text fails.txt` (vai `--html lapa.html`) `--allow tools/data/lv-it-supplement.txt --allow tools/data/tezaurs-gaps.txt`
 - **Projekta vārdnīca:** savam projektam pievieno savu failu (viens vārds rindā, `#` komentāri) un padod ar vēl vienu `--allow`.
 - **Priekšnosacījums:** vienreizējs indeksa build no CLARIN avotiem — `python tools/build_from_clarin.py` (~25 min, viss offline pēc tam). Bez indeksa strādā tikai B3 stila skeneris.
-- **Aptvērums (v2, godīgi):** B1 = pareizrakstības kandidāti, B2 = formu eksistence + retu lemmu pazīme, B3 = stila manifests. Locījumu SASKAŅOŠANA (2b) vēl NAV — tā ir ceļa kartē aiz sava kvalitātes sliekšņa.
+- **Saskaņas vārti (2b, neobligāti):** pievieno `--agreement` — amod/nsubj locījumu saskaņa caur AiLab lvnlp parseri (pilnībā offline, `analyzer=False`). Prasa atsevišķu 2b vidi: `pip install lvnlp` (velk torch CPU; pirmā palaišana lejupielādē ~0.6 GB HF modeli) un Windows **obligāti `PYTHONUTF8=1`**. Ātrums ~0.3 s/teikums — batch post-edit lietojumam, ne taustiņsitienu ceļam.
+- **Aptvērums (v2, godīgi):** B1 = pareizrakstības kandidāti, B2 = formu eksistence + retu lemmu pazīme + saskaņas vārti ar `--agreement`, B3 = stila manifests. 2b kvalitātes slieksnis nokārtots ar §12 spike 2026-07-16 uz 110 native-validētiem minimālajiem pāriem: precision 0.986 (Wilson LB 0.926 ≥ 0.90), coverage 0.818, 1 FP. Robeža, ko zināt: parsers daļu pārkāpumu kontekstuāli normalizē (tāpēc coverage 0.82, ne 1.0) — 2b ķer lielāko daļu locījumu kļūdu, ne visas.
 
 ## Voice-slot contract
 

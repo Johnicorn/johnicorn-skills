@@ -5,12 +5,15 @@ from collections import Counter
 from html.parser import HTMLParser
 import json
 from pathlib import Path
+import re
 import sys
 
 from b.allowlist import load_allowlist
 from b.analyze import analyze
 from b.ondisk import load_index_ondisk
-from b3.scanner import WORD_TOKEN
+from b3.scanner import WORD_TOKEN, Flag
+
+_SENTENCE = re.compile(r"[^.!?…\n]+[.!?…]*")
 
 
 class _VisibleText(HTMLParser):
@@ -49,7 +52,32 @@ def _parse_args() -> argparse.Namespace:
         "--index", type=Path, default=(tools / "../vendor/tezaurs/index/b2").resolve())
     parser.add_argument("--allow", type=Path, action="append", default=[])
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument(
+        "--agreement", action="store_true",
+        help="2b saskaņas vārti (amod/nsubj) caur lvnlp — prasa 2b vidi: "
+             "pip install lvnlp (torch CPU) + PYTHONUTF8=1; ~0.3 s/teikums")
     return parser.parse_args()
+
+
+def _agreement_flags(text: str) -> list[Flag]:
+    """Naiva teikumu dalīšana + 2b čekeris; spani pārbāzēti uz visu tekstu."""
+    try:
+        from b.agreement import LvnlpAdapter, agreement_flags
+        adapter = LvnlpAdapter()
+    except ImportError as exc:
+        raise SystemExit(
+            f"--agreement prasa lvnlp vidi (pip install lvnlp; PYTHONUTF8=1): {exc}") from exc
+    flags: list[Flag] = []
+    for match in _SENTENCE.finditer(text):
+        chunk = match.group()
+        base = match.start() + (len(chunk) - len(chunk.lstrip()))
+        sentence = chunk.strip()
+        if not WORD_TOKEN.search(sentence):
+            continue
+        flags.extend(
+            Flag(flag.start + base, flag.end + base, flag.rule_id, flag.severity, flag.observed)
+            for flag in agreement_flags(sentence, adapter))
+    return flags
 
 
 def main() -> int:
@@ -59,6 +87,8 @@ def main() -> int:
     allow = load_allowlist(*args.allow)
     lexicon, index = load_index_ondisk(args.index)
     flags = analyze(text, lexicon, index, allow)
+    if args.agreement:
+        flags = flags + _agreement_flags(text)
     tokens_scanned = len(WORD_TOKEN.findall(text))
     flags_by_code = Counter(flag.rule_id for flag in flags)
     unique = Counter((flag.observed, flag.rule_id) for flag in flags)
