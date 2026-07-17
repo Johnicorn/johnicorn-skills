@@ -1,0 +1,13 @@
+Dati paši neko neizstāsta. Tie pacietīgi guļ tabulās, serveros un valsts reģistros, līdz kāds uzdod pareizo jautājumu. Studiju programma “Datu zinātne un mākslīgais intelekts” māca šos jautājumus formulēt, pārbaudīt un pārvērst risinājumos, kas darbojas ārpus auditorijas.
+
+Pirmajā studiju gadā apgūsi programmēšanu Python valodā, matemātisko analīzi, lineāro algebru, statistiku un datubāzu pamatus. Jā, būs formulas. Taču neviena no tām nav paredzēta tikai glītai vietai eksāmena lapā. Ar regresijas modeli prognozēsi pieprasījumu, ar SQL vaicājumu atradīsi kļūdu datos, bet ar vizualizāciju parādīsi secinājumu cilvēkam, kurš kodu nelasa un negrasās sākt.
+
+Vēlāk pievērsīsies mašīnmācīšanās metodēm, neironu tīkliem, dabiskās valodas apstrādei un lielo datu sistēmām. Analizēsi reālas datu kopas, salīdzināsi modeļus un mācīsies pamanīt brīdi, kad iespaidīgs rezultāts patiesībā balstās šķībā izlasē. Algoritms var kļūdīties ļoti pārliecinoši. Tāpēc programmā līdzās tehnoloģijām pētīsi datu ētiku, privātumu, autortiesības un mākslīgā intelekta ietekmi uz sabiedrību.
+
+Lekcijas dod pamatus, bet prasmes aug darot. Individuālos uzdevumos rakstīsi kodu un skaidrosi savus lēmumus. Komandu projektos sadalīsi pienākumus, aizstāvēsi izvēlēto pieeju un reizēm pārrakstīsi risinājumu, jo pirmais variants vienkārši nestrādā. Tā nu gadās arī profesionāļiem. Pasniedzēji palīdzēs atrast kļūdas, taču neatņems prieku tās vispirms radīt pašam.
+
+Studiju laikā vari doties apmaiņā uz kādu no partneraugstskolām Eiropā, iesaistīties pētniecības projektā vai praksē pārbaudīt zināšanas uzņēmumā un valsts iestādē. Noslēguma darbā risināsi konkrētu problēmu: prognozēsi enerģijas patēriņu, klasificēsi tekstus, atklāsi anomālijas finanšu datos vai izstrādāsi pats savu tematu.
+
+Absolventi strādā par datu analītiķiem, mašīnmācīšanās inženieriem, biznesa inteliģences speciālistiem un programmatūras izstrādātājiem. Daļa turpina studijas maģistrantūrā vai pētniecībā. Amata nosaukumi mainīsies vēl daudzkārt, bet spēja domāt skaidri, analizēt pierādījumus un uzbūvēt pārbaudāmu risinājumu paliks.
+
+Šī programma der cilvēkam, kuru interesē tehnoloģijas, nebaida matemātika un kaitina nepamatoti secinājumi. Gatavas atbildes te neizsniedz. Te māca tās pārbaudīt.

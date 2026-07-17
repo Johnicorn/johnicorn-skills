@@ -1,0 +1,11 @@
+Rīga, 2026. gada 16. jūlijs — Latvijas IT uzņēmums “Datu Tilts” laiž tirgū “Plūsma”, tiešsaistes darba vidi, kas apkopo uzņēmuma dokumentus, klientu saraksti, uzdevumus un iekšējo saziņu vienuviet. Produkts radīts mazām un vidējām komandām, kuras ikdienā pārslēdzas starp vairākām programmām un svarīgu informāciju nereti meklē e-pastos, tērzētavās vai izklājlapās.
+
+“Plūsma” savieno uzņēmumā jau izmantotos rīkus, tostarp Microsoft 365, Google Workspace, Slack un populārākās klientu vadības sistēmas. Darbinieks var vienā meklēšanas laukā atrast līgumu, pārbaudīt projekta termiņu vai noskaidrot, kurš kolēģis runājis ar konkrēto klientu. Sistēma saglabā saiti uz sākotnējo avotu, lai lietotājs redzētu ne vien atbildi, bet arī tās pamatojumu.
+
+“Mazā uzņēmumā informācijas netrūkst. Trūkst laika to atrast,” saka “Datu Tilts” vadītāja Elīna Ozola. “Mēs negribējām radīt vēl vienu logu, kas darbadienas beigās paliek atvērts līdzās desmit citiem. Tāpēc būvējām vietu, kur komanda var ātri nonākt pie vajadzīgā un turpināt darbu.”
+
+Produkta izstrāde sākās 2024. gada rudenī. Izmēģinājuma programmā piedalījās 18 Latvijas uzņēmumi no grāmatvedības, ražošanas, loģistikas un radošo pakalpojumu nozarēm. Trīs mēnešu pārbaudē komandas dokumentu un projektu informācijas meklēšanai vidēji patērēja par 27 procentiem mazāk laika. Šo rezultātu uzņēmums aprēķināja, salīdzinot dalībnieku anonimizētos lietošanas datus pirms un pēc “Plūsmas” ieviešanas.
+
+“Plūsma” izmanto mākslīgo intelektu dokumentu klasificēšanai, meklēšanai un īsu kopsavilkumu sagatavošanai. Klientu dati glabājas Eiropas Savienībā, bet piekļuves tiesības uzņēmums var noteikt katrai komandai, projektam un dokumentu grupai. Saturs netiek izmantots publisku mākslīgā intelekta modeļu apmācībai.
+
+No šodienas produkts pieejams Latvijā, Lietuvā un Igaunijā latviešu un angļu valodā. Abonements maksā no 12 eiro mēnesī par lietotāju, un uzņēmumi var sākt ar 30 dienu izmēģinājumu. Pirmajā darbības gadā “Datu Tilts” plāno piesaistīt 150 uzņēmumu un rudenī atvērt integrāciju izstrādes vidi vietējiem programmatūras veidotājiem.

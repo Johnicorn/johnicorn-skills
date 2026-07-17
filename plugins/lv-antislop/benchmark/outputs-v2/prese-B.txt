@@ -1,0 +1,13 @@
+Rīgā, 2026. gada 16. jūlijā Latvijas IT uzņēmums “Datne” laiž tirgū produktu “Sargs” — rīku, kas uzņēmumu iekšējās sistēmās atrod kļūdaini publiskotus dokumentus, piekļuves atslēgas un personas datus. Tas pārbauda failu mapes, mākoņkrātuves un pirmkoda glabātavas, pirms neveikls klikšķis pārtop incidentā.
+
+“Sargu” uzņēmums izstrādāja pēc trim drošības auditiem, kuros atkārtojās viena un tā pati aina: tehniskās aizsardzības strādāja, bet sensitīvs fails bija nonācis nepareizajā mapē. Vienā pārbaudē publiski pieejamā serverī atradās 186 klientu līgumi. Citā — testa vides parole, kas derēja arī ražošanas sistēmai. Ugunsmūris pret cilvēka steigu, nu, neko daudz neiebildīs.
+
+Rīks ik pēc 15 minūtēm skenē norādītās vietas un salīdzina failu saturu ar vairāk nekā 240 riska pazīmēm. “Sargs” atpazīst Latvijas personas kodus, banku kontus, API atslēgas, paroles, līgumu numurus un uzņēmuma paša definētus terminus. Ja sistēma atrod risku, tā nosūta atbildīgajam darbiniekam īsu paziņojumu ar faila atrašanās vietu un ieteikto rīcību. Datus “Datne” neglabā savos serveros — analīze notiek klienta infrastruktūrā.
+
+“Drošības komandām jau ir gana daudz paneļu, kuros viss deg sarkanā krāsā. Mēs gribējām uzbūvēt ko piezemētāku: rīku, kas pasaka, kur atrodas problēma un kam tā jāizlabo,” saka “Datnes” produktu vadītāja Līva Krūmiņa. “Pirmajā izmēģinājuma nedēļā viens klients atrada 47 sen aizmirstus failus. Neviens no tiem nebija hakeru darbs. Cilvēki vienkārši bija darījuši savu darbu.”
+
+Sešu mēnešu izmēģinājumos “Sargu” lietoja 12 Latvijas uzņēmumi finanšu, loģistikas un mazumtirdzniecības nozarē. Kopā rīks pārbaudīja 3,8 miljonus failu un atklāja 614 gadījumus, kuros informācija atradās plašāk pieejamā vietā, nekā uzņēmums bija paredzējis. 71 procentu brīdinājumu darbinieki atrisināja vienas darba dienas laikā.
+
+“Sargs” no šodienas pieejams uzņēmumiem ar vismaz 50 darbiniekiem. Abonēšana maksā no 290 eiro mēnesī, un cenā ietilpst trīs datu avoti, 25 lietotāji un ieviešanas konsultācija latviešu valodā. Pirmie klienti sistēmu var pieslēgt “Microsoft 365”, “Google Workspace”, “GitHub” un lokālajiem failu serveriem.
+
+Mazāk trokšņa. Mazāk publisku pārsteigumu.

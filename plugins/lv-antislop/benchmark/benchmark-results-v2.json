@@ -1,0 +1,367 @@
+{
+  "summary": {
+    "prompts": 10,
+    "generator": "OpenAI Codex CLI (konfigurācijas modelis; model_reasoning_effort=low)",
+    "metric": "B3 manifests v1.1.0 + SKILL.md aktīvo likumu teksta statistika",
+    "median_tokens": {
+      "A_base": 265.5,
+      "B_skill": 280.5
+    },
+    "median_issues_per_1k": {
+      "A_base": 0.0,
+      "B_skill": 0.0
+    },
+    "median_diagnostics_per_1k": {
+      "A_base": 3.7,
+      "B_skill": 0.0
+    },
+    "median_tiek_per_1k": {
+      "A_base": 0.0,
+      "B_skill": 0.0
+    },
+    "median_kanc_verbs_per_1k": {
+      "A_base": 0.0,
+      "B_skill": 0.0
+    },
+    "median_sentence_len_stdev": {
+      "A_base": 4.65,
+      "B_skill": 5.42
+    },
+    "total_mes_sentence_starts": {
+      "A_base": 3,
+      "B_skill": 1
+    },
+    "total_exclamations": {
+      "A_base": 1,
+      "B_skill": 0
+    },
+    "total_issues": {
+      "A_base": 1,
+      "B_skill": 0
+    }
+  },
+  "rows": [
+    {
+      "prompt": "pasvaldiba",
+      "task": "pašvaldības paziņojumu iedzīvotājiem par plānotu ūdens padeves pārtraukumu",
+      "A": {
+        "tokens": 249,
+        "sentences": 21,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 4.02,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.14,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 256,
+        "sentences": 30,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.76,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "es-fonds",
+      "task": "Eiropas Savienības fonda līdzfinansēta projekta publicitātes aprakstu uzņēmuma mājaslapai",
+      "A": {
+        "tokens": 267,
+        "sentences": 16,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 3.75,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 3.75,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 6.17,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 286,
+        "sentences": 22,
+        "b3_issues": 0,
+        "b3_flags_total": 2,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 6.99,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.16,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "banka",
+      "task": "bankas paziņojumu klientiem par izmaiņām pakalpojumu cenrādī",
+      "A": {
+        "tokens": 256,
+        "sentences": 19,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 3.91,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 1,
+        "sentence_len_stdev": 4.42,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 268,
+        "sentences": 26,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.17,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "apdrosinasana",
+      "task": "apdrošināšanas produkta noteikumu skaidrojumu klientiem",
+      "A": {
+        "tokens": 301,
+        "sentences": 26,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 4.47,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 285,
+        "sentences": 28,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 3.51,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 3.36,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "gada-parskats",
+      "task": "valsts iestādes gada publiskā pārskata ievadu",
+      "A": {
+        "tokens": 274,
+        "sentences": 19,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 3.65,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 4.2,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 280,
+        "sentences": 24,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 6.23,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "prese",
+      "task": "IT uzņēmuma preses relīzi par jauna produkta laišanu tirgū",
+      "A": {
+        "tokens": 264,
+        "sentences": 21,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 6.16,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 281,
+        "sentences": 24,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 1,
+        "exclamations": 0,
+        "sentence_len_stdev": 6.64,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "augstskola",
+      "task": "augstskolas studiju programmas aprakstu uzņemšanas katalogam",
+      "A": {
+        "tokens": 12,
+        "sentences": 1,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 0.0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 281,
+        "sentences": 24,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.87,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "nvo-parskats",
+      "task": "nevalstiskās organizācijas gada darbības kopsavilkumu ziedotājiem",
+      "A": {
+        "tokens": 271,
+        "sentences": 18,
+        "b3_issues": 1,
+        "b3_flags_total": 4,
+        "issues_per_1k": 3.69,
+        "diagnostics_per_1k": 11.07,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 11.07,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 4.34,
+        "issue_rules": [
+          "transition.tadejadi"
+        ]
+      },
+      "B": {
+        "tokens": 264,
+        "sentences": 21,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 3.79,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.55,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "kvalitate",
+      "task": "ražošanas uzņēmuma kvalitātes politikas lapu",
+      "A": {
+        "tokens": 273,
+        "sentences": 21,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 3,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.03,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 295,
+        "sentences": 30,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 3.92,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "telekoms",
+      "task": "telekomunikāciju operatora paziņojumu par tīkla modernizāciju",
+      "A": {
+        "tokens": 249,
+        "sentences": 16,
+        "b3_issues": 0,
+        "b3_flags_total": 2,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 8.03,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 8.03,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 4.83,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 259,
+        "sentences": 28,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "diagnostics_per_1k": 0.0,
+        "tiek_per_1k": 0.0,
+        "kanc_verbs_per_1k": 0.0,
+        "mes_sentence_starts": 0,
+        "exclamations": 0,
+        "sentence_len_stdev": 5.29,
+        "issue_rules": []
+      }
+    }
+  ]
+}

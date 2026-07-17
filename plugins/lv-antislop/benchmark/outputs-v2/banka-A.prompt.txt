@@ -1,0 +1,1 @@
+Uzraksti latviešu valodā bankas paziņojumu klientiem par izmaiņām pakalpojumu cenrādī. Apjoms: aptuveni 320–420 vārdu. Atbildē tikai pats teksts — bez virsrakstiem, komentāriem un formatējuma.

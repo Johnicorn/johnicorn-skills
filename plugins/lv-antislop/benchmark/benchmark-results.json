@@ -1,0 +1,225 @@
+{
+  "summary": {
+    "prompts": 10,
+    "generator": "OpenAI Codex CLI (konfigurācijas modelis; model_reasoning_effort=low)",
+    "metric": "B3 stila manifests v1.1.0 (iesaldēts), deterministisks skeneris",
+    "median_issues_per_1k": {
+      "A_base": 0.0,
+      "B_skill": 0.0
+    },
+    "median_tokens": {
+      "A_base": 132.5,
+      "B_skill": 130.0
+    },
+    "total_issues": {
+      "A_base": 0,
+      "B_skill": 0
+    },
+    "total_tiek": {
+      "A_base": 0,
+      "B_skill": 0
+    }
+  },
+  "rows": [
+    {
+      "prompt": "par-mums",
+      "task": "mājaslapas sadaļu Par mums nelielam grāmatvedības birojam Rīgā",
+      "A": {
+        "tokens": 123,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 132,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "produkts",
+      "task": "produkta aprakstu e-veikalam — ergonomisks biroja krēsls",
+      "A": {
+        "tokens": 142,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 125,
+        "b3_issues": 0,
+        "b3_flags_total": 2,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "pakalpojums",
+      "task": "pakalpojuma lapas tekstu — logu mazgāšana daudzstāvu ēkām",
+      "A": {
+        "tokens": 125,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 136,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "epasts",
+      "task": "jaunumu e-pastu fitnesa kluba biedriem par jauno nodarbību grafiku",
+      "A": {
+        "tokens": 130,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 117,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "linkedin",
+      "task": "LinkedIn ierakstu par uzņēmuma desmit gadu jubileju",
+      "A": {
+        "tokens": 133,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 130,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "karjera",
+      "task": "IT uzņēmuma karjeras lapas ievadu",
+      "A": {
+        "tokens": 135,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 132,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "viesnica",
+      "task": "viesnīcas aprakstu rezervāciju platformai",
+      "A": {
+        "tokens": 145,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 124,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "vebinars",
+      "task": "aicinājumu pieteikties vebināram par personīgajām finansēm",
+      "A": {
+        "tokens": 120,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 130,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "restorans",
+      "task": "restorāna koncepta tekstu ēdienkartes pirmajai lapai",
+      "A": {
+        "tokens": 132,
+        "b3_issues": 0,
+        "b3_flags_total": 1,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 131,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    },
+    {
+      "prompt": "ziedojumi",
+      "task": "nevalstiskās organizācijas ziedojumu kampaņas aprakstu",
+      "A": {
+        "tokens": 136,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      },
+      "B": {
+        "tokens": 128,
+        "b3_issues": 0,
+        "b3_flags_total": 0,
+        "issues_per_1k": 0.0,
+        "tiek_count": 0,
+        "issue_rules": []
+      }
+    }
+  ]
+}

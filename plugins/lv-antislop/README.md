@@ -47,6 +47,10 @@ Ja instalē caur marketplace: būvē indeksus ĀRPUS spraudņa mapes, piemēram 
 
 Saskaņas pārbaudes kvalitātes mērījums balstās uz autora veidotu un dzimtās valodas runātāja validētu datu kopu — 110 minimālajiem pāriem ar iesaldētu integritātes hash: [contracts/2b-minimal-pairs.v1.yaml](contracts/2b-minimal-pairs.v1.yaml), licence CC BY 4.0. Mērījuma protokols, skripti un pilnie rezultāti: [spike/](spike/). Cik zināms, tas ir pirmais publiskais latviešu locījumu saskaņas minimālo pāru komplekts.
 
+## Benchmarks
+
+Instrukciju slāņa pārneses mērījums uz citu modeli (Codex) ar deterministisku metriku, ieskaitot godīgu nulles rezultātu īsos tekstos: [benchmark/BENCHMARK.md](benchmark/BENCHMARK.md) — visi prompti un izvades saglabātas pilnai atkārtojamībai.
+
 ## Testu palaišana
 
 ```text

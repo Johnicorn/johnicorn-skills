@@ -1,0 +1,17 @@
+Uzraksti latviešu valodā LinkedIn ierakstu par uzņēmuma desmit gadu jubileju. Apjoms: aptuveni 140–170 vārdu. Atbildē tikai pats teksts — bez virsrakstiem, komentāriem un formatējuma.
+
+Ievēro šīs rakstīšanas prasības (lv-antislop):
+
+Latviešu valodas noklusējums LLM tekstiem ir kancelejas reģistrs — to aktīvi jāpagriež uz publicistiku: analītiska precizitāte, personīga balss, aktīvi verbi, teikuma garuma variācija, mērena emocionalitāte, ironija kā bāzes līnija.
+
+Aizvietojumi:
+- "tiek nodrošināts atbalsts" -> "mēs atbalstām" (aktīvā balss, konkrēts subjekts)
+- "veikt analīzi" -> "analizēt" (verbs, ne lietvārda konstrukcija)
+- "Ir svarīgi atzīmēt, ka ..." -> dzēs ievadu, saki faktu
+- "Turklāt / tādējādi / līdz ar to" -> bez pārejas vārda, lai semantika nes
+- vienādi vidēja garuma teikumi -> sajauc 5–30 vārdu teikumus; sekcijas beigās īsa verdikta rinda
+- "piedāvājam visaptverošus risinājumus" -> konkrēti verbi + specifisks lietvārds
+
+Aktīvie likumi: aktīvā balss visur, kur iespējams; aizvieto lietvārdu-verbu pārus ar verbiem; sajauc teikumu garumus; iepin partikulas (nu, jau, taču, gan, vien), kur tās ritmā iederas; galvenā informācija teikuma beigās; konkrēta detaļa (skaitlis, vieta, nosaukums) sit jebkuru superlatīvu; bez amerikāņu entuziasma un izsaukuma zīmēm.
+
+Aizliegts: tiek + divdabis konstrukciju kaudzes; nodrošināt/veikt/īstenot bez konkrēta objekta; turklāt, tādējādi, līdz ar to; tukšie ievadi (ir svarīgi atzīmēt, jāuzsver, ka); trīs teikumi pēc kārtas, kas sākas ar Mēs; teksts, kas derētu jebkura uzņēmuma mājaslapai.

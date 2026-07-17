@@ -1,0 +1,7 @@
+Pie mums laba ideja neceļo caur septiņām saskaņošanas sapulcēm. Tā nonāk GitHub, iziet koda pārskatu un, ja viss turas kopā, sasniedz lietotājus. Reizēm vēl tajā pašā nedēļā.
+
+Mēs veidojam programmatūru, ko cilvēki lieto ikdienā, nevis glabā prezentāciju pēdējos slaidos. Komandā strādā izstrādātāji, dizaineri, produktu vadītāji un datu speciālisti. Katram ir sava atbildība, taču nevienam nav monopola uz labu jautājumu. Arī praktikantam drīkst būt taisnība. Gadās pat bieži.
+
+Darbu plānojam saprātīgos posmos, lēmumus pierakstām, bet kļūdas neizliekamies neredzam. Kolēģi palīdz, kad iestrēgsti, un pasaka tieši, ja risinājums kļuvis gudrāks par pašu problēmu. Pārrunas par algu sākam ar skaitļiem, nevis miglainu solījumu par “konkurētspējīgu atalgojumu”. Reizi nedēļā sanākam klātienē Rīgas birojā; pārējās dienās vari strādāt tur, kur netraucē nejauši kafijas automāta monologi.
+
+Ja gribi rakstīt labu kodu, ietekmēt produktu un saglabāt vakarus sev, parunāsim.
